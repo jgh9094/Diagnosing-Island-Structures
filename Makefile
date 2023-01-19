@@ -35,7 +35,7 @@ debug-web:	$(PROJECT).js
 web-debug:	debug-web
 
 $(PROJECT): Source/world.h Source/selection.h Source/diagnostic.h Source/org.h Source/structure.h Source/Native/$(PROJECT).cc
-	$(CXX_nat) $(CFLAGS_nat) Source/native/$(PROJECT).cc -o $(PROJECT)
+	$(CXX_nat) $(CFLAGS_nat) Source/Native/$(PROJECT).cc -o $(PROJECT)
 	@echo To build the web version use: make web
 
 $(PROJECT).js: Source/web/$(PROJECT)-web.cc
