@@ -94,7 +94,7 @@ fi
 
 ####################################################################
 
-RUN_DIR=${DATA_DIR}/MODEL_IM__INT_${MIGRATION_INT}__CNT_${ISLAND_COUNT}__SIZE_${ISLAND_SIZE}__MIG_${MIGRATION}/${NAME}/
+RUN_DIR=${DATA_DIR}/MODEL_IM__INT_${MIGRATION_INTERVAL}__CNT_${ISLAND_COUNT}__SIZE_${ISLAND_SIZE}__MIG_${MIGRATION}/${NAME}/
 
 # make a run directory
 mkdir -p ${RUN_DIR}
