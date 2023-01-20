@@ -52,24 +52,21 @@ def CheckDir(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset):
     if os.path.isdir(dir):
         print('Data dirctory exists=', dir)
     else:
-        x = 0
-        # sys.exit('DATA DIRECTORY DOES NOT EXIST: ' + dir)
+        sys.exit('DATA DIRECTORY DOES NOT EXIST: ' + dir)
 
     # check if experiment folder exists
     EXP_DIR = dir + dp.SetSelection(sel) + '/' + dp.SetExperimentType(exp) + '/'
     if os.path.isdir(EXP_DIR):
         print('Selection scheme data folder exists', EXP_DIR)
     else:
-        x = 0
-        # sys.exit('SELECTION DATA DIRECTORY DOES NOT EXIST: ' + EXP_DIR)
+        sys.exit('SELECTION DATA DIRECTORY DOES NOT EXIST: ' + EXP_DIR)
 
     # check if island configuration folder exists
     ISL_DIR = EXP_DIR + 'MODEL_' + dp.SetModelType(mod) + '__INT_' + mig_int + '__CNT_' + isl_cnt + '__SIZE_' + isl_size + '__MIG_' + mig_bool + '/'
     if os.path.isdir(ISL_DIR):
         print('Island configuration folder exists', ISL_DIR)
     else:
-        x = 0
-        # sys.exit('ISLAND CONFIGURATION FOLDER EXISTS: ' + ISL_DIR)
+        sys.exit('ISLAND CONFIGURATION FOLDER EXISTS: ' + ISL_DIR)
 
     # create seed data directories and check if exist
     DIR_DNE = []
