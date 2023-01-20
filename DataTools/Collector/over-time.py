@@ -112,7 +112,7 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
 
     fin_df = pd.concat(DF_LIST)
 
-    fin_df.to_csv(path_or_buf= dump + 'over-time-' + dp.SetModelType(mod) + '-' + dp.SetSelection(sel)  + '.csv', index=False)
+    fin_df.to_csv(path_or_buf= dump + 'over-time-' + dp.SetSelection(sel)  + '.csv', index=False)
 
 # runner
 def main():
