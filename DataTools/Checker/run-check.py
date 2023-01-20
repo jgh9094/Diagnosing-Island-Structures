@@ -83,7 +83,7 @@ def CheckDir(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset):
     for i in range(len(SEEDS)):
         for s in SEEDS[i]:
             seed = str(s + offset)
-            DATA_DIR =  ISL_DIR + 'DIA_' + dp.SetDiagnostic(i) + '__' + '__SEED_' + seed + '/'
+            DATA_DIR =  ISL_DIR + 'DIA_' + dp.SetDiagnostic(i) + '__SEED_' + seed + '/'
 
             print('Sub directory:', DATA_DIR)
 
