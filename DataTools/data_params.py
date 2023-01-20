@@ -23,6 +23,8 @@ ISL_ACT_COV = 'isl_act_cov'
 LOS_DIV = 'los_div'
 SEL_PRE = 'sel_pre'
 
+DATA_LIST = [POP_FIT_AVG,POP_FIT_MAX,ISL_FIT_AVG,POP_SAT_COV,ISL_SAT_COV,POP_ACT_COV,ISL_ACT_COV,LOS_DIV,SEL_PRE]
+
 # seed experiements replicates range
 REPLICATES = 100
 GENERATIONS = 50000
