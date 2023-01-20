@@ -761,18 +761,21 @@ void DiagWorld::StructureStep()
   if(1 == config.ISL_CNT()) {return;}
 
   // do we need to execute a migration event?
-  if((update % config.MIGRATION_INT() == 0) and (0 < update) and config.MIGRATION())
+  if(config.MIGRATION())
   {
-    // migration time
-    structure->Migration(config.MIGRATION_SZE());
-
-    // go through each island in the structure
-    for(size_t isl = 0; isl < config.ISL_CNT(); ++isl)
+    if((update % config.MIGRATION_INT() == 0) and (0 < update))
     {
-      for(const size_t & id : structure->GetIsland(isl))
+      // migration time
+      structure->Migration(config.MIGRATION_SZE());
+
+      // go through each island in the structure
+      for(size_t isl = 0; isl < config.ISL_CNT(); ++isl)
       {
-        Org & org = *pop[id];
-        org.SetIslandID(isl);
+        for(const size_t & id : structure->GetIsland(isl))
+        {
+          Org & org = *pop[id];
+          org.SetIslandID(isl);
+        }
       }
     }
   }
