@@ -22,7 +22,6 @@
 ######################## IMPORTS ########################
 import argparse
 import pandas as pd
-import csv
 import sys
 import os
 
