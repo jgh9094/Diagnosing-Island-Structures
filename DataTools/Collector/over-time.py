@@ -150,7 +150,7 @@ def main():
     offset = args.offset
     print('Diagnostic=', offset)
     dump_directory = args.dump_directory
-    print('Diagnostic=', dump_directory)
+    print('Dump directory=', dump_directory)
 
     # Get to work!
     print("\nChecking all related data directories now!")
