@@ -27,6 +27,7 @@ SEL_PRE = 'sel_pre'
 REPLICATES = 100
 GENERATIONS = 50000
 SEED_OFFSET = 1000
+RESOLUTION = 100
 
 # return appropiate string dir name (based off run.sb file naming system)
 def SetSelection(s):
@@ -68,9 +69,9 @@ def SetModelType(m):
     if m == 0:
         return 'EA'
     elif m == 1:
-        return 'IM'
+        return 'IS'
     elif m == 2:
-        return 'NMIM'
+        return 'NMIS'
     else:
         sys.exit("UNKNOWN VARIABLE LIST")
 
