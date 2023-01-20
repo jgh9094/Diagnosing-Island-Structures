@@ -29,21 +29,6 @@ import os
 sys.path.insert(1, '../')
 import data_params as dp
 
-# return the number of rows in a csv file
-def CountRows(file_name):
-    # create pandas data frame of entire csv
-    try:
-        df = pd.read_csv(file_name)
-    except pd.errors.EmptyDataError:
-        df = pd.DataFrame()
-
-    if(df.shape[0] == 0):
-        return 0
-
-    gens = df[dp.GENERATION].to_list()
-
-    return gens[-1]
-
 # responsible for looking through the data directories for success
 def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
 
