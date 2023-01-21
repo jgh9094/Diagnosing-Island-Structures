@@ -93,7 +93,6 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
                 DIA.append(dp.SetDiagnostic(i))
 
     # Time to export the csv file
-    # time to export the data
     fdf = pd.DataFrame({'MOD': pd.Series(MOD),'VAL': pd.Series(VAL),'VAR': pd.Series(VAR),'GEN': pd.Series(GEN),'SEL': pd.Series(SEL),'DIA': pd.Series(DIA)})
     fdf.to_csv(path_or_buf= dump + 'best-' + dp.SetSelection(sel)  + '.csv', index=False)
 
