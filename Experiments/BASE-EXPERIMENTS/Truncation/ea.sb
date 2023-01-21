@@ -15,7 +15,7 @@ module load GCC/10.2.0; module load CUDA/11.1.1; module load Clang/11.0.1;
 ##################################
 # Setup relevant directories
 ##################################
-DATA_DIR=/mnt/gs21/scratch/herna383/ISLAND-MODELS-FIRST-RUN/TRUNCATION/BASE-EXPERIMENTS
+DATA_DIR=/mnt/gs21/scratch/herna383/ISLAND-MODELS-FIRST-RUN/TRUNCATION/BASE-EXPERIMENTS/EA
 
 ##################################
 # Setup random seed info
@@ -94,7 +94,7 @@ fi
 
 ####################################################################
 
-RUN_DIR=${DATA_DIR}/MODEL_EA__INT_${MIGRATION_INTERVAL}__CNT_${ISLAND_COUNT}__SIZE_${ISLAND_SIZE}__MIG_${MIGRATION_SWITCH}/${NAME}/
+RUN_DIR=${DATA_DIR}/INT_${MIGRATION_INTERVAL}__CNT_${ISLAND_COUNT}__SIZE_${ISLAND_SIZE}__MIG_${MIGRATION_SWITCH}/${NAME}/
 
 # make a run directory
 mkdir -p ${RUN_DIR}
