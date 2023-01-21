@@ -65,7 +65,7 @@ def CheckDir(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset):
     if os.path.isdir(ISL_DIR):
         print('Island configuration folder exists', ISL_DIR)
     else:
-        sys.exit('ISLAND CONFIGURATION FOLDER EXISTS: ' + ISL_DIR)
+        sys.exit('ISLAND CONFIGURATION FOLDER DOES NOT EXISTS: ' + ISL_DIR)
 
     # create seed data directories and check if exist
     DIR_DNE = []
