@@ -13,6 +13,7 @@ GENERATION = 'gen'
 # pop level
 POP_FIT_AVG = 'pop_fit_avg'
 POP_FIT_MAX = 'pop_fit_max'
+POP_OPT_MAX = 'pop_opt_max'
 ISL_FIT_AVG = 'isl_fit_avg'
 # coverage data
 POP_SAT_COV = 'pop_sat_cov'
@@ -30,6 +31,7 @@ REPLICATES = 100
 GENERATIONS = 50000
 SEED_OFFSET = 1000
 RESOLUTION = 100
+DIMENTIONALITY = 100
 
 # return appropiate string dir name (based off run.sb file naming system)
 def SetSelection(s):
