@@ -154,6 +154,6 @@ DUMP=${DUMP_DIR}/${MODEL_DIR}/
 # make a run directory
 mkdir -p ${DUMP}
 
-echo "python3 ../solution-sol.py ${DATA_DIR} ${SELECTION} ${EXPERIMENT} ${MODEL} ${MIGRATION_INTERVAL} ${MIGRATION_BOOL} ${ISLAND_SIZE} ${ISLAND_COUNT} ${SEED} ${DUMP}  > run.log" > ./cmd-coh.txt
+echo "python3 ../Collector/solution-sol.py ${DATA_DIR} ${SELECTION} ${EXPERIMENT} ${MODEL} ${MIGRATION_INTERVAL} ${MIGRATION_BOOL} ${ISLAND_SIZE} ${ISLAND_COUNT} ${SEED} ${DUMP}  > run.log" > ./cmd-coh.txt
 
-python3 ../solution-sol.py ${DATA_DIR} ${SELECTION} ${EXPERIMENT} ${MODEL} ${MIGRATION_INTERVAL} ${MIGRATION_BOOL} ${ISLAND_SIZE} ${ISLAND_COUNT} ${SEED} ${DUMP}
+python3 ../Collector/solution-sol.py ${DATA_DIR} ${SELECTION} ${EXPERIMENT} ${MODEL} ${MIGRATION_INTERVAL} ${MIGRATION_BOOL} ${ISLAND_SIZE} ${ISLAND_COUNT} ${SEED} ${DUMP}
