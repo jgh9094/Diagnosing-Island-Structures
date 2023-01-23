@@ -47,7 +47,7 @@ def CountRows(file_name):
 # responsible for looking through the data directories for success
 def CheckDir(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset):
 
-    ISL_DIR = dp.GetIslandDirectory(exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool)
+    ISL_DIR = dp.GetIslandDirectory(dir,exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool)
 
     # create seed data directories and check if exist
     DIR_DNE = []

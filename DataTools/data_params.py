@@ -88,7 +88,7 @@ def SetExperimentType(e):
         sys.exit("UNKNOWN VARIABLE LIST")
 
 
-def GetIslandDirectory(exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool):
+def GetIslandDirectory(dir,exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool):
     # check if data dir exists
     if os.path.isdir(dir):
         print('Data dirctory exists=', dir)
@@ -96,7 +96,7 @@ def GetIslandDirectory(exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool):
         sys.exit('DATA DIRECTORY DOES NOT EXIST: ' + dir)
 
     # check if experiment folder exists
-    EXP_DIR = dir + '/' + SetExperimentType(exp) + '/'
+    EXP_DIR = dir + SetExperimentType(exp) + '/'
     if os.path.isdir(EXP_DIR):
         print('Experiment data folder exists', EXP_DIR)
     else:
