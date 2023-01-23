@@ -7,6 +7,7 @@
 #####################################################################################################
 
 import sys
+import os
 
 # columns we are interested in grabbing
 GENERATION = 'gen'
@@ -85,3 +86,41 @@ def SetExperimentType(e):
         return 'BASE-EXPERIMENTS'
     else:
         sys.exit("UNKNOWN VARIABLE LIST")
+
+
+def GetIslandDirectory(exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool):
+    # check if data dir exists
+    if os.path.isdir(dir):
+        print('Data dirctory exists=', dir)
+    else:
+        sys.exit('DATA DIRECTORY DOES NOT EXIST: ' + dir)
+
+    # check if experiment folder exists
+    EXP_DIR = dir + '/' + SetExperimentType(exp) + '/'
+    if os.path.isdir(EXP_DIR):
+        print('Experiment data folder exists', EXP_DIR)
+    else:
+        sys.exit('EXPERIMENT DATA DIRECTORY DOES NOT EXIST: ' + EXP_DIR)
+
+    # check if selection scheme folder exists
+    SEL_DIR = EXP_DIR + SetSelection(sel) + '/'
+    if os.path.isdir(SEL_DIR):
+        print('Selection scheme data folder exists', SEL_DIR)
+    else:
+        sys.exit('SELECTION DATA DIRECTORY DOES NOT EXIST: ' + SEL_DIR)
+
+    # check if model folder exists
+    MOD_DIR = SEL_DIR + SetModelType(mod) + '/'
+    if os.path.isdir(MOD_DIR):
+        print('ModeL data folder exists', MOD_DIR)
+    else:
+        sys.exit('MODEL DATA DIRECTORY DOES NOT EXIST: ' + MOD_DIR)
+
+    # check if island configuration folder exists
+    ISL_DIR = MOD_DIR + 'INT_' + mig_int + '__CNT_' + isl_cnt + '__SIZE_' + isl_size + '__MIG_' + mig_bool + '/'
+    if os.path.isdir(ISL_DIR):
+        print('Island configuration folder exists', ISL_DIR)
+    else:
+        sys.exit('ISLAND CONFIGURATION FOLDER DOES NOT EXISTS: ' + ISL_DIR)
+
+    return ISL_DIR
