@@ -1,18 +1,19 @@
 #####################################################################################################
 #
-# Will list all of the incomplete run id's that need to finish running, per selection/diagnotic treatment
-# Script will go through each replicate for a specific selection/diagnostic treatment
+# Will find first generation a satisfactory solution is found
 #
 # Command Line Inputs:
 #
 # data_directory: directory where data is located
 #      selection: selection scheme used
-#     diagnostic: diagnostic used
-#    seed_offset: seed offset (if any)
-#     objectives: dimensionality
-#       accuracy: satisfactory trait accuracy %
-#    generations: generations ran
-#      param_two: genotypic (0) or phenotypic (1) similarity for fitness sharing
+#     experiment: experiment ran
+#          model: island structure model
+#        mig_int: migration interval
+#       mig_bool: are migrations happening?
+#       isl_size: island size
+#        isl_cnt: number of islands
+#         offset: seed offset
+# dump_directory: where are we dumping everything
 #
 # Output: list of seeds that need to be reran in terminal display
 #
@@ -32,25 +33,8 @@ import data_params as dp
 # responsible for looking through the data directories for success
 def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
 
-    # check if data dir exists
-    if os.path.isdir(dir):
-        print('Data dirctory exists=', dir)
-    else:
-        sys.exit('DATA DIRECTORY DOES NOT EXIST: ' + dir)
-
-    # check if experiment folder exists
-    EXP_DIR = dir + dp.SetSelection(sel) + '/' + dp.SetExperimentType(exp) + '/'
-    if os.path.isdir(EXP_DIR):
-        print('Selection scheme data folder exists', EXP_DIR)
-    else:
-        sys.exit('SELECTION DATA DIRECTORY DOES NOT EXIST: ' + EXP_DIR)
-
-    # check if island configuration folder exists
-    ISL_DIR = EXP_DIR + 'MODEL_' + dp.SetModelType(mod) + '__INT_' + mig_int + '__CNT_' + isl_cnt + '__SIZE_' + isl_size + '__MIG_' + mig_bool + '/'
-    if os.path.isdir(ISL_DIR):
-        print('Island configuration folder exists', ISL_DIR)
-    else:
-        sys.exit('ISLAND CONFIGURATION FOLDER EXISTS: ' + ISL_DIR)
+    # get island directory
+    ISL_DIR = dp.GetIslandDirectory(dir,exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool)
 
     print('Full data Dir=', ISL_DIR + 'DIA_XXX__SEED_XXX/')
     print('Now checking data replicates sub directories')
