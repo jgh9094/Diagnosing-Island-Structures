@@ -67,6 +67,7 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
                 {   'Generations':          pd.Series(GEN_LIST),
                     'Structure':            pd.Series([dp.SetModelType(mod)] * len(GEN_LIST)),
                     'Selection Scheme':     pd.Series([dp.SetSelection(sel)] * len(GEN_LIST)),
+                    'Diagnostic':           pd.Series([dp.SetDiagnostic(i)] * len(GEN_LIST)),
                     dp.POP_FIT_AVG:         pd.Series(df[dp.POP_FIT_AVG].tolist()),
                     dp.POP_FIT_MAX:         pd.Series(df[dp.POP_FIT_MAX].tolist()),
                     dp.ISL_FIT_AVG:         pd.Series(df[dp.ISL_FIT_AVG].tolist()),
