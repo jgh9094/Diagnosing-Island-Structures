@@ -54,14 +54,28 @@ def CheckDir(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset):
         sys.exit('DATA DIRECTORY DOES NOT EXIST: ' + dir)
 
     # check if experiment folder exists
-    EXP_DIR = dir + dp.SetSelection(sel) + '/' + dp.SetExperimentType(exp) + '/'
+    EXP_DIR = dir + '/' + dp.SetExperimentType(exp) + '/'
     if os.path.isdir(EXP_DIR):
-        print('Selection scheme data folder exists', EXP_DIR)
+        print('Experiment data folder exists', EXP_DIR)
     else:
-        sys.exit('SELECTION DATA DIRECTORY DOES NOT EXIST: ' + EXP_DIR)
+        sys.exit('EXPERIMENT DATA DIRECTORY DOES NOT EXIST: ' + EXP_DIR)
+
+    # check if selection scheme folder exists
+    SEL_DIR = EXP_DIR + dp.SetSelection(sel) + '/'
+    if os.path.isdir(SEL_DIR):
+        print('Selection scheme data folder exists', SEL_DIR)
+    else:
+        sys.exit('SELECTION DATA DIRECTORY DOES NOT EXIST: ' + SEL_DIR)
+
+    # check if model folder exists
+    MOD_DIR = SEL_DIR + dp.SetModelType(mod) + '/'
+    if os.path.isdir(MOD_DIR):
+        print('ModeL data folder exists', MOD_DIR)
+    else:
+        sys.exit('MODEL DATA DIRECTORY DOES NOT EXIST: ' + MOD_DIR)
 
     # check if island configuration folder exists
-    ISL_DIR = EXP_DIR + 'MODEL_' + dp.SetModelType(mod) + '__INT_' + mig_int + '__CNT_' + isl_cnt + '__SIZE_' + isl_size + '__MIG_' + mig_bool + '/'
+    ISL_DIR = MOD_DIR + 'INT_' + mig_int + '__CNT_' + isl_cnt + '__SIZE_' + isl_size + '__MIG_' + mig_bool + '/'
     if os.path.isdir(ISL_DIR):
         print('Island configuration folder exists', ISL_DIR)
     else:
