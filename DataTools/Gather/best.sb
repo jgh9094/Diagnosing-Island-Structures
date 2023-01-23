@@ -144,6 +144,9 @@ elif [ ${MODEL} -eq 1 ] ; then
   MODEL_DIR=IS
 elif [ ${MODEL} -eq 2 ] ; then
   MODEL_DIR=NMIS
+else
+  echo "${OFFSET_SEED} failed to launch" >> /mnt/ls15/scratch/users/herna383/ps-coh-failtolaunch.txt
+fi
 
 SEED=$((OFFSET_SEED + REPLICATION_OFFSET))
 
