@@ -32,9 +32,6 @@ import data_params as dp
 
 # responsible for looking through the data directories for success
 def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
-
-    print('Dump:',dump + dp.SetExperimentType(exp) + '/best-' + dp.SetSelection(sel)  + '.csv')
-
     # get island directory
     ISL_DIR = dp.GetIslandDirectory(dir,exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool)
 
