@@ -84,6 +84,10 @@ def SetModelType(m):
 def SetExperimentType(e):
     if e == 0:
         return 'BASE-EXPERIMENTS'
+    elif e == 1:
+        return 'MI50'
+    elif e == 2:
+        return 'MI5000'
     else:
         sys.exit("UNKNOWN VARIABLE LIST")
 
