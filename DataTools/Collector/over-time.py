@@ -66,7 +66,7 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
             cdf = pd.DataFrame(
                 {   'Generations':          pd.Series(GEN_LIST),
                     'Structure':            pd.Series([dp.SetModelType(mod)] * len(GEN_LIST)),
-                    'Selection Scheme':     pd.Series([dp.SetSelection(sel)] * len(GEN_LIST)),
+                    'SEL':     pd.Series([dp.SetSelection(sel)] * len(GEN_LIST)),
                     'Diagnostic':           pd.Series([dp.SetDiagnostic(i)] * len(GEN_LIST)),
                     dp.POP_FIT_AVG:         pd.Series(df[dp.POP_FIT_AVG].tolist()),
                     dp.POP_FIT_MAX:         pd.Series(df[dp.POP_FIT_MAX].tolist()),
@@ -82,7 +82,7 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
 
     fin_df = pd.concat(DF_LIST)
 
-    fin_df.to_csv(path_or_buf= dump + 'over-time-' + dp.SetSelection(sel)  + '.csv', index=False)
+    fin_df.to_csv(path_or_buf= dump + dp.SetExperimentType(exp) + 'over-time-' + dp.SetSelection(sel)  + '.csv', index=False)
 
 # runner
 def main():
@@ -108,7 +108,7 @@ def main():
     experiment = int(args.experiment)
     print('Experiment=', experiment)
     model = int(args.model)
-    print('Experiment=', model)
+    print('Model=', model)
     mig_int = args.mig_int
     print('Migration interval=', mig_int)
     mig_bool = args.mig_bool

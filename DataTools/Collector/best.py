@@ -33,6 +33,8 @@ import data_params as dp
 # responsible for looking through the data directories for success
 def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
 
+    print('Dump:',dump + dp.SetExperimentType(exp) + '/best-' + dp.SetSelection(sel)  + '.csv')
+
     # get island directory
     ISL_DIR = dp.GetIslandDirectory(dir,exp,sel,mod,mig_int,isl_cnt,isl_size,mig_bool)
 
@@ -77,8 +79,8 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
                 DIA.append(dp.SetDiagnostic(i))
 
     # Time to export the csv file
-    fdf = pd.DataFrame({'MOD': pd.Series(MOD),'VAL': pd.Series(VAL),'VAR': pd.Series(VAR),'GEN': pd.Series(GEN),'SEL': pd.Series(SEL),'DIA': pd.Series(DIA)})
-    fdf.to_csv(path_or_buf= dump + 'best-' + dp.SetSelection(sel)  + '.csv', index=False)
+    fdf = pd.DataFrame({'Structure': pd.Series(MOD),'VAL': pd.Series(VAL),'VAR': pd.Series(VAR),'Generations': pd.Series(GEN),'SEL': pd.Series(SEL),'Diagnostic': pd.Series(DIA)})
+    fdf.to_csv(path_or_buf= dump + dp.SetExperimentType(exp) + '/best-' + dp.SetSelection(sel)  + '.csv', index=False)
 
 # runner
 def main():
@@ -104,7 +106,7 @@ def main():
     experiment = int(args.experiment)
     print('Experiment=', experiment)
     model = int(args.model)
-    print('Experiment=', model)
+    print('Model=', model)
     mig_int = args.mig_int
     print('Migration interval=', mig_int)
     mig_bool = args.mig_bool

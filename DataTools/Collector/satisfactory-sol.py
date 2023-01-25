@@ -76,8 +76,8 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
                 GEN.append(gens[0])
 
     # Time to export the csv file
-    fdf = pd.DataFrame({'MOD': pd.Series(MOD),'GEN': pd.Series(GEN),'SEL': pd.Series(SEL),'DIA': pd.Series(DIA)})
-    fdf.to_csv(path_or_buf= dump + 'ssf-' + dp.SetSelection(sel)  + '.csv', index=False)
+    fdf = pd.DataFrame({'Structure': pd.Series(MOD),'Generations': pd.Series(GEN),'SEL': pd.Series(SEL),'Diagnostic': pd.Series(DIA)})
+    fdf.to_csv(path_or_buf= dump + dp.SetExperimentType(exp) + 'ssf-' + dp.SetSelection(sel)  + '.csv', index=False)
 
 # runner
 def main():
@@ -103,7 +103,7 @@ def main():
     experiment = int(args.experiment)
     print('Experiment=', experiment)
     model = int(args.model)
-    print('Experiment=', model)
+    print('Model=', model)
     mig_int = args.mig_int
     print('Migration interval=', mig_int)
     mig_bool = args.mig_bool
