@@ -118,7 +118,7 @@ def main():
     experiment = int(args.experiment)
     print('Experiment=', experiment)
     model = int(args.model)
-    print('Experiment=', model)
+    print('Model=', model)
     mig_int = args.mig_int
     print('Migration interval=', mig_int)
     mig_bool = args.mig_bool
