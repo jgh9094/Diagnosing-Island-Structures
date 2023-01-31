@@ -27,7 +27,7 @@ import sys
 import os
 
 # file location for data-params.py file
-sys.path.insert(1, '../')
+sys.path.insert(1, '../../')
 import data_params as dp
 
 # responsible for looking through the data directories for success
