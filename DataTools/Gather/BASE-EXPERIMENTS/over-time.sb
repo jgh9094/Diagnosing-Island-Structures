@@ -16,7 +16,7 @@ module load GCCcore/11.2.0; module load Python/3.9.6; pip3 install pandas;
 # SETUP RELEVANT DIRECTORIES
 ##################################
 DATA_DIR=/mnt/gs21/scratch/herna383/ISLAND-MODELS-FIRST-RUN/
-DUMP_DIR=/mnt/home/herna383/Diagnostics/ISLAND-STRUCTURE-DATA-1-20-22/
+DUMP_DIR=/mnt/home/herna383/Diagnostics/ISLAND-STRUCTURE-DATA-1-20-22/BASE-EXPERIMENTS/
 
 ##################################
 # SETUP RELEVANT DIRECTORIES
