@@ -77,7 +77,7 @@ def Directories(dir,sel,exp,mod,mig_int,mig_bool,isl_size,isl_cnt,offset,dump):
 
     # Time to export the csv file
     fdf = pd.DataFrame({'Structure': pd.Series(MOD),'Generations': pd.Series(GEN),'SEL': pd.Series(SEL),'Diagnostic': pd.Series(DIA)})
-    fdf.to_csv(path_or_buf= dump + dp.SetExperimentType(exp) + 'ssf-' + dp.SetSelection(sel)  + '.csv', index=False)
+    fdf.to_csv(path_or_buf= dump + 'ssf-' + dp.SetSelection(sel)  + '.csv', index=False)
 
 # runner
 def main():
