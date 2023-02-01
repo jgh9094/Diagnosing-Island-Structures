@@ -86,8 +86,6 @@ RUN \
     && \
   R -e "install.packages('PupillometryR', dependencies=NA, repos='http://cran.rstudio.com/')" \
     && \
-  R -e "install.packages('sdamr', dependencies=NA, repos='http://cran.rstudio.com/')" \
-    && \
   echo "installed r and configured r environment"
 
 
@@ -99,9 +97,7 @@ RUN \
     && \
   export OSF_PROJECT=vbk8d \
     && \
-  export PROJECT_PATH=/opt/Diagnosing-Island-Structures/DATA-FINAL/ \
-    && \
-  export mkdir ${PROJECT_PATH} \
+  export PROJECT_PATH=/opt/Diagnosing-Island-Structures/ \
     && \
   osf -p ${OSF_PROJECT} fetch 2023-01-20-23.tar.gz ${PROJECT_PATH}2023-01-20-23.tar.gz \
     && \
