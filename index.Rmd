@@ -20,6 +20,148 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is the supplemental material associated with the 6th chapter in my dissertation.
 
-Hello world! asdfasdf
+## Computer Setup
 
-asdfasdf
+These analyses were conducted in the following computing environment:
+
+```{r com-ver}
+print(version)
+```
+
+## Experimental setup
+
+Setting up required variables variables.
+
+```{r data-setup}
+# libraries we are using
+library(ggplot2)
+library(cowplot)
+library(dplyr)
+library(PupillometryR)
+library(sdamr)
+
+p_theme <- theme(
+  text = element_text(size = 28),
+  plot.title = element_text( face = "bold", size = 22, hjust = 0.5),
+  panel.border = element_blank(),
+  panel.grid.minor = element_blank(),
+  legend.title=element_text(size=18),
+  legend.text=element_text(size=14),
+  axis.title = element_text(size=18),
+  axis.text = element_text(size=16),
+  legend.position="bottom",
+  panel.background = element_rect(fill = "#f1f2f5",
+                                  colour = "white",
+                                  size = 0.5, linetype = "solid")
+)
+
+# default variables
+
+MODEL = c('EA','IS','NMIS')
+EXPERIMENTS = c('BASE-EXPERIMENTS/','MI50/','MI5000/')
+SCHEME = c('TRUNCATION','TOURNAMENT','LEXICASE')
+DIAGNOSTIC = c('EXPLOITATION_RATE', 'ORDERED_EXPLOITATION', 'CONTRADICTORY_OBJECTIVES', 'MULTIPATH_EXPLORATION')
+DIMENSIONALITY = 100
+cb_palette <- c('#D81B60','#1E88E5','#FFC107')
+SHAPE = c(15,16,17)
+TSIZE = 20
+GENERATIONS = 50000
+
+# data related
+DATA_DIR = '/opt/Diagnosing-Island-Structures/DATA-FINAL/'
+
+# go through each diagnostic and collect over time data for cross comparison (cc)
+base_over_time = data.frame()
+mi50_over_time = data.frame()
+mi5000_over_time = data.frame()
+print('over time data')
+for(model in MODEL)
+{
+  print(model)
+  for(scheme in SCHEME)
+  {
+    base_dir = paste(DATA_DIR,EXPERIMENTS[1],model,'/over-time-',scheme, '.csv', sep = "", collapse = NULL)
+    base_over_time = rbind(base_over_time, read.csv(base_dir, header = TRUE, stringsAsFactors = FALSE))
+
+    mi50_dir = paste(DATA_DIR,EXPERIMENTS[2],model,'/over-time-',scheme, '.csv', sep = "", collapse = NULL)
+    mi50_over_time = rbind(mi50_over_time, read.csv(mi50_dir, header = TRUE, stringsAsFactors = FALSE))
+
+    mi5000_dir = paste(DATA_DIR,EXPERIMENTS[3],model,'/over-time-',scheme, '.csv', sep = "", collapse = NULL)
+    mi5000_over_time = rbind(mi5000_over_time, read.csv(mi5000_dir, header = TRUE, stringsAsFactors = FALSE))
+
+  }
+}
+
+colnames(base_over_time)[colnames(base_over_time) == "SEL"] = 'Selection\nScheme'
+base_over_time$Structure <- factor(base_over_time$Structure, levels = MODEL)
+base_over_time$sel_pre = base_over_time$sel_pre * -1.0
+
+colnames(mi50_over_time)[colnames(mi50_over_time) == "SEL"] = 'Selection\nScheme'
+mi50_over_time$Structure <- factor(mi50_over_time$Structure, levels = MODEL)
+mi50_over_time$sel_pre = mi50_over_time$sel_pre * -1.0
+
+colnames(mi5000_over_time)[colnames(mi5000_over_time) == "SEL"] = 'Selection\nScheme'
+mi5000_over_time$Structure <- factor(mi5000_over_time$Structure, levels = MODEL)
+mi5000_over_time$sel_pre = mi5000_over_time$sel_pre * -1.0
+
+
+# go through each diagnostic and collect best over time for cross comparison (cc)
+base_best = data.frame()
+mi50_best = data.frame()
+mi5000_best = data.frame()
+print('best data')
+for(model in MODEL)
+{
+  print(model)
+  for(scheme in SCHEME)
+  {
+    base_dir = paste(DATA_DIR,EXPERIMENTS[1],model,'/best-',scheme, '.csv', sep = "", collapse = NULL)
+    base_best = rbind(base_best, read.csv(base_dir, header = TRUE, stringsAsFactors = FALSE))
+
+    mi50_dir = paste(DATA_DIR,EXPERIMENTS[2],model,'/best-',scheme, '.csv', sep = "", collapse = NULL)
+    mi50_best = rbind(mi50_best, read.csv(mi50_dir, header = TRUE, stringsAsFactors = FALSE))
+
+    mi5000_dir = paste(DATA_DIR,EXPERIMENTS[3],model,'/best-',scheme, '.csv', sep = "", collapse = NULL)
+    mi5000_best = rbind(mi5000_best, read.csv(mi5000_dir, header = TRUE, stringsAsFactors = FALSE))
+  }
+}
+
+colnames(base_best)[colnames(base_best) == "SEL"] = 'Selection\nScheme'
+base_best$Structure <- factor(base_best$Structure, levels = MODEL)
+
+colnames(mi50_best)[colnames(mi50_best) == "SEL"] = 'Selection\nScheme'
+mi50_best$Structure <- factor(mi50_best$Structure, levels = MODEL)
+
+colnames(mi5000_best)[colnames(mi5000_best) == "SEL"] = 'Selection\nScheme'
+mi5000_best$Structure <- factor(mi5000_best$Structure, levels = MODEL)
+
+# get generation a satisfactory solution is found for cross comparison (cc)
+base_ssf = data.frame()
+mi50_ssf = data.frame()
+mi5000_ssf = data.frame()
+print('ssf data')
+for(model in MODEL)
+{
+  print(model)
+  for(scheme in SCHEME)
+  {
+    base_dir = paste(DATA_DIR,EXPERIMENTS[1],model,'/ssf-',scheme, '.csv', sep = "", collapse = NULL)
+    base_ssf = rbind(base_ssf, read.csv(base_dir, header = TRUE, stringsAsFactors = FALSE))
+
+    mi50_dir = paste(DATA_DIR,EXPERIMENTS[2],model,'/ssf-',scheme, '.csv', sep = "", collapse = NULL)
+    mi50_ssf = rbind(mi50_ssf, read.csv(mi50_dir, header = TRUE, stringsAsFactors = FALSE))
+
+    mi5000_dir = paste(DATA_DIR,EXPERIMENTS[3],model,'/ssf-',scheme, '.csv', sep = "", collapse = NULL)
+    mi5000_ssf = rbind(mi5000_ssf, read.csv(mi5000_dir, header = TRUE, stringsAsFactors = FALSE))
+  }
+}
+
+colnames(base_ssf)[colnames(base_ssf) == "SEL"] = 'Selection\nScheme'
+base_ssf$Structure <- factor(base_ssf$Structure, levels = MODEL)
+
+colnames(mi50_ssf)[colnames(mi50_ssf) == "SEL"] = 'Selection\nScheme'
+mi50_ssf$Structure <- factor(mi50_ssf$Structure, levels = MODEL)
+
+colnames(mi5000_ssf)[colnames(mi5000_ssf) == "SEL"] = 'Selection\nScheme'
+mi5000_ssf$Structure <- factor(mi5000_ssf$Structure, levels = MODEL)
+```
