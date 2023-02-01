@@ -38,7 +38,6 @@ library(ggplot2)
 library(cowplot)
 library(dplyr)
 library(PupillometryR)
-library(sdamr)
 
 p_theme <- theme(
   text = element_text(size = 28),
