@@ -72,40 +72,42 @@ RUN \
     && \
   R -e "install.packages('bookdown', dependencies=NA, repos='http://cran.rstudio.com/')" \
     && \
-  # R -e "install.packages('tidyverse', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('cowplot', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('plyr', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('Hmisc', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('ggplot2', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('dplyr', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('PupillometryR', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
-  # R -e "install.packages('sdamr', dependencies=NA, repos='http://cran.rstudio.com/')" \
-  #   && \
+  R -e "install.packages('tidyverse', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('cowplot', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('plyr', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('Hmisc', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('ggplot2', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('dplyr', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('PupillometryR', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
+  R -e "install.packages('sdamr', dependencies=NA, repos='http://cran.rstudio.com/')" \
+    && \
   echo "installed r and configured r environment"
 
 
 ########################################################
 # install osfclient, use to download project data
 ########################################################
-# RUN \
-#   pip3 install osfclient \
-#     && \
-#   export OSF_PROJECT=5nv86 \
-#     && \
-#   export PROJECT_PATH=/opt/Diagnosing-Island-Structures/ \
-#     && \
-#   osf -p ${OSF_PROJECT} fetch 2023-01-17-data.tar.gz ${PROJECT_PATH}2023-01-17-data.tar.gz \
-#     && \
-#   tar -xzf ${PROJECT_PATH}2023-01-17-data.tar.gz -C ${PROJECT_PATH} \
-#     && \
-#   echo "download"
+RUN \
+  pip3 install osfclient \
+    && \
+  export OSF_PROJECT=vbk8d \
+    && \
+  export PROJECT_PATH=/opt/Diagnosing-Island-Structures/DATA-FINAL/ \
+    && \
+  export mkdir ${PROJECT_PATH} \
+    && \
+  osf -p ${OSF_PROJECT} fetch 2023-01-20-23.tar.gz ${PROJECT_PATH}2023-01-20-23.tar.gz \
+    && \
+  tar -xzf ${PROJECT_PATH}2023-01-20-23.tar.gz -C ${PROJECT_PATH} \
+    && \
+  echo "download"
 
 ########################################################
 # build supplemental material (will also run data analyses)
@@ -116,8 +118,8 @@ RUN \
   chmod +x build_book.sh \
     && \
   ls -l \
-  #   && \
-  # ls -l DATA-FINAL/ \
+    && \
+  ls -l DATA-FINAL/ \
     && \
   ./build_book.sh \
     && \
