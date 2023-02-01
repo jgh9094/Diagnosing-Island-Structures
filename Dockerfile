@@ -99,7 +99,7 @@ RUN \
 #     && \
 #   export OSF_PROJECT=5nv86 \
 #     && \
-#   export PROJECT_PATH=/opt/ECJ-2022-suite-of-diagnostics-for-selection-schemes/ \
+#   export PROJECT_PATH=/opt/Diagnosing-Island-Structures/ \
 #     && \
 #   osf -p ${OSF_PROJECT} fetch 2023-01-17-data.tar.gz ${PROJECT_PATH}2023-01-17-data.tar.gz \
 #     && \
@@ -111,7 +111,7 @@ RUN \
 # build supplemental material (will also run data analyses)
 ########################################################
 RUN \
-  cd /opt/ECJ-2022-suite-of-diagnostics-for-selection-schemes \
+  cd /opt/Diagnosing-Island-Structures \
     && \
   chmod +x build_book.sh \
     && \
