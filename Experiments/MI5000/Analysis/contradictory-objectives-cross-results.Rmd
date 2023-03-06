@@ -9,7 +9,7 @@ When migrations occur, two individuals are swapped (same position on each island
 
 ## Analysis dependencies
 
-```{r mi5000-ord-libs, message=FALSE}
+```{r mi5000-con-libs, message=FALSE}
 library(ggplot2)
 library(cowplot)
 library(dplyr)
