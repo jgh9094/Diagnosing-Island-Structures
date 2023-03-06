@@ -9,5 +9,13 @@ rmd_files: [
   "Experiments/BASE-EXPERIMENTS/Analysis/ordered-exploitation-cross-results.Rmd",
   "Experiments/BASE-EXPERIMENTS/Analysis/contradictory-objectives-cross-results.Rmd",
   "Experiments/BASE-EXPERIMENTS/Analysis/multi-path-exploration-cross-results.Rmd",
+  "Experiments/MI50/Analysis/exploitation-rate-cross-results.Rmd",
+  "Experiments/MI50/Analysis/ordered-exploitation-cross-results.Rmd",
+  "Experiments/MI50/Analysis/contradictory-objectives-cross-results.Rmd",
+  "Experiments/MI50/Analysis/multi-path-exploration-cross-results.Rmd",
+  "Experiments/MI5000/Analysis/exploitation-rate-cross-results.Rmd",
+  "Experiments/MI5000/Analysis/ordered-exploitation-cross-results.Rmd",
+  "Experiments/MI5000/Analysis/contradictory-objectives-cross-results.Rmd",
+  "Experiments/MI5000/Analysis/multi-path-exploration-cross-results.Rmd",
   "tail.Rmd"
 ]
