@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 13 MI5000: Multi-path exploration results | Diagnosing Island Supplemental Material</title>
+  <meta name="description" content="Supplemental material for the diagnosing island structures with diagnostics." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 13 MI5000: Multi-path exploration results | Diagnosing Island Supplemental Material" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Supplemental material for the diagnosing island structures with diagnostics." />
+  <meta name="github-repo" content="jgh9094/Diagnosing-Island-Structures" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 13 MI5000: Multi-path exploration results | Diagnosing Island Supplemental Material" />
+  
+  <meta name="twitter:description" content="Supplemental material for the diagnosing island structures with diagnostics." />
+  
+
+<meta name="author" content="Jose Guadalupe Hernandez" />
+
+
+<meta name="date" content="2023-03-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="mi5000-contradictory-objectives-results.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#computer-setup"><i class="fa fa-check"></i><b>1.1</b> Computer Setup</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#experimental-setup"><i class="fa fa-check"></i><b>1.2</b> Experimental setup</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html"><i class="fa fa-check"></i><b>2</b> BASE: Exploitation rate results</a><ul>
+<li class="chapter" data-level="2.1" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#analysis-dependencies"><i class="fa fa-check"></i><b>2.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="2.2" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#truncation-selection"><i class="fa fa-check"></i><b>2.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#performance-over-time"><i class="fa fa-check"></i><b>2.2.1</b> Performance over time</a></li>
+<li class="chapter" data-level="2.2.2" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#generation-satisfactory-solution-found"><i class="fa fa-check"></i><b>2.2.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="2.2.3" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#stats"><i class="fa fa-check"></i><b>2.2.3</b> Stats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#tournament-selection"><i class="fa fa-check"></i><b>2.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#performance-over-time-1"><i class="fa fa-check"></i><b>2.3.1</b> Performance over time</a></li>
+<li class="chapter" data-level="2.3.2" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#generation-satisfactory-solution-found-1"><i class="fa fa-check"></i><b>2.3.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="2.3.3" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#stats-1"><i class="fa fa-check"></i><b>2.3.3</b> Stats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#lexicase-selection"><i class="fa fa-check"></i><b>2.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#performance-over-time-2"><i class="fa fa-check"></i><b>2.4.1</b> Performance over time</a></li>
+<li class="chapter" data-level="2.4.2" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#generation-satisfactory-solution-found-2"><i class="fa fa-check"></i><b>2.4.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="2.4.3" data-path="base-exploitation-rate-results.html"><a href="base-exploitation-rate-results.html#stats-2"><i class="fa fa-check"></i><b>2.4.3</b> Stats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html"><i class="fa fa-check"></i><b>3</b> BASE: Ordered exploitation results</a><ul>
+<li class="chapter" data-level="3.1" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#analysis-dependencies-1"><i class="fa fa-check"></i><b>3.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="3.2" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#truncation-selection-1"><i class="fa fa-check"></i><b>3.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#performance-over-time-3"><i class="fa fa-check"></i><b>3.2.1</b> Performance over time</a></li>
+<li class="chapter" data-level="3.2.2" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#generation-satisfactory-solution-found-3"><i class="fa fa-check"></i><b>3.2.2</b> Generation satisfactory solution found</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#tournament-selection-1"><i class="fa fa-check"></i><b>3.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#performance-over-time-4"><i class="fa fa-check"></i><b>3.3.1</b> Performance over time</a></li>
+<li class="chapter" data-level="3.3.2" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#generation-satisfactory-solution-found-4"><i class="fa fa-check"></i><b>3.3.2</b> Generation satisfactory solution found</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#lexicase-selection-1"><i class="fa fa-check"></i><b>3.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#performance-over-time-5"><i class="fa fa-check"></i><b>3.4.1</b> Performance over time</a></li>
+<li class="chapter" data-level="3.4.2" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#best-performance"><i class="fa fa-check"></i><b>3.4.2</b> Best performance</a></li>
+<li class="chapter" data-level="3.4.3" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#final-performance"><i class="fa fa-check"></i><b>3.4.3</b> Final performance</a></li>
+<li class="chapter" data-level="3.4.4" data-path="base-ordered-exploitation-results.html"><a href="base-ordered-exploitation-results.html#generation-satisfactory-solution-found-5"><i class="fa fa-check"></i><b>3.4.4</b> Generation satisfactory solution found</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html"><i class="fa fa-check"></i><b>4</b> BASE: Contradictory objectives results</a><ul>
+<li class="chapter" data-level="4.1" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#analysis-dependencies-2"><i class="fa fa-check"></i><b>4.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="4.2" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#truncation-selection-2"><i class="fa fa-check"></i><b>4.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#satisfactory-trait-coverage"><i class="fa fa-check"></i><b>4.2.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="4.2.2" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#activation-gene-coverage"><i class="fa fa-check"></i><b>4.2.2</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#tournament-selection-2"><i class="fa fa-check"></i><b>4.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#satisfactory-trait-coverage-1"><i class="fa fa-check"></i><b>4.3.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="4.3.2" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#activation-gene-coverage-1"><i class="fa fa-check"></i><b>4.3.2</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#lexicase-selection-2"><i class="fa fa-check"></i><b>4.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#satisfactory-trait-coverage-2"><i class="fa fa-check"></i><b>4.4.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="4.4.2" data-path="base-contradictory-objectives-results.html"><a href="base-contradictory-objectives-results.html#activation-gene-coverage-2"><i class="fa fa-check"></i><b>4.4.2</b> Activation gene coverage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html"><i class="fa fa-check"></i><b>5</b> BASE: Multi-path exploration results</a><ul>
+<li class="chapter" data-level="5.1" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#analysis-dependencies-3"><i class="fa fa-check"></i><b>5.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="5.2" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#truncation-selection-3"><i class="fa fa-check"></i><b>5.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#performance"><i class="fa fa-check"></i><b>5.2.1</b> Performance</a></li>
+<li class="chapter" data-level="5.2.2" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#generation-satisfactory-solution-found-6"><i class="fa fa-check"></i><b>5.2.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="5.2.3" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#activation-gene-coverage-3"><i class="fa fa-check"></i><b>5.2.3</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#tournament-selection-3"><i class="fa fa-check"></i><b>5.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#performance-1"><i class="fa fa-check"></i><b>5.3.1</b> Performance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#generation-satisfactory-solution-found-7"><i class="fa fa-check"></i><b>5.3.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="5.3.3" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#activation-gene-coverage-4"><i class="fa fa-check"></i><b>5.3.3</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#lexicase-selection-3"><i class="fa fa-check"></i><b>5.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#performance-2"><i class="fa fa-check"></i><b>5.4.1</b> Performance</a></li>
+<li class="chapter" data-level="5.4.2" data-path="base-multi-path-exploration-results.html"><a href="base-multi-path-exploration-results.html#activation-gene-coverage-5"><i class="fa fa-check"></i><b>5.4.2</b> Activation gene coverage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html"><i class="fa fa-check"></i><b>6</b> MI50: Exploitation rate results</a><ul>
+<li class="chapter" data-level="6.1" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#analysis-dependencies-4"><i class="fa fa-check"></i><b>6.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="6.2" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#truncation-selection-4"><i class="fa fa-check"></i><b>6.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#performance-over-time-9"><i class="fa fa-check"></i><b>6.2.1</b> Performance over time</a></li>
+<li class="chapter" data-level="6.2.2" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#generation-satisfactory-solution-found-8"><i class="fa fa-check"></i><b>6.2.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="6.2.3" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#stats-28"><i class="fa fa-check"></i><b>6.2.3</b> Stats</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#tournament-selection-4"><i class="fa fa-check"></i><b>6.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#performance-over-time-10"><i class="fa fa-check"></i><b>6.3.1</b> Performance over time</a></li>
+<li class="chapter" data-level="6.3.2" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#generation-satisfactory-solution-found-9"><i class="fa fa-check"></i><b>6.3.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="6.3.3" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#stats-29"><i class="fa fa-check"></i><b>6.3.3</b> Stats</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#lexicase-selection-4"><i class="fa fa-check"></i><b>6.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#performance-over-time-11"><i class="fa fa-check"></i><b>6.4.1</b> Performance over time</a></li>
+<li class="chapter" data-level="6.4.2" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#generation-satisfactory-solution-found-10"><i class="fa fa-check"></i><b>6.4.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="6.4.3" data-path="mi50-exploitation-rate-results.html"><a href="mi50-exploitation-rate-results.html#stats-30"><i class="fa fa-check"></i><b>6.4.3</b> Stats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html"><i class="fa fa-check"></i><b>7</b> MI50: Ordered exploitation results</a><ul>
+<li class="chapter" data-level="7.1" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#analysis-dependencies-5"><i class="fa fa-check"></i><b>7.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="7.2" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#truncation-selection-5"><i class="fa fa-check"></i><b>7.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#performance-over-time-12"><i class="fa fa-check"></i><b>7.2.1</b> Performance over time</a></li>
+<li class="chapter" data-level="7.2.2" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#generation-satisfactory-solution-found-11"><i class="fa fa-check"></i><b>7.2.2</b> Generation satisfactory solution found</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#tournament-selection-5"><i class="fa fa-check"></i><b>7.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#performance-over-time-13"><i class="fa fa-check"></i><b>7.3.1</b> Performance over time</a></li>
+<li class="chapter" data-level="7.3.2" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#generation-satisfactory-solution-found-12"><i class="fa fa-check"></i><b>7.3.2</b> Generation satisfactory solution found</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#lexicase-selection-5"><i class="fa fa-check"></i><b>7.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#performance-over-time-14"><i class="fa fa-check"></i><b>7.4.1</b> Performance over time</a></li>
+<li class="chapter" data-level="7.4.2" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#best-performance-4"><i class="fa fa-check"></i><b>7.4.2</b> Best performance</a></li>
+<li class="chapter" data-level="7.4.3" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#final-performance-4"><i class="fa fa-check"></i><b>7.4.3</b> Final performance</a></li>
+<li class="chapter" data-level="7.4.4" data-path="mi50-ordered-exploitation-results.html"><a href="mi50-ordered-exploitation-results.html#generation-satisfactory-solution-found-13"><i class="fa fa-check"></i><b>7.4.4</b> Generation satisfactory solution found</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html"><i class="fa fa-check"></i><b>8</b> MI50: Contradictory objectives results</a><ul>
+<li class="chapter" data-level="8.1" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#analysis-dependencies-6"><i class="fa fa-check"></i><b>8.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="8.2" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#truncation-selection-6"><i class="fa fa-check"></i><b>8.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#satisfactory-trait-coverage-3"><i class="fa fa-check"></i><b>8.2.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="8.2.2" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#activation-gene-coverage-6"><i class="fa fa-check"></i><b>8.2.2</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#tournament-selection-6"><i class="fa fa-check"></i><b>8.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#satisfactory-trait-coverage-4"><i class="fa fa-check"></i><b>8.3.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="8.3.2" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#activation-gene-coverage-7"><i class="fa fa-check"></i><b>8.3.2</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#lexicase-selection-6"><i class="fa fa-check"></i><b>8.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#satisfactory-trait-coverage-5"><i class="fa fa-check"></i><b>8.4.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="8.4.2" data-path="mi50-contradictory-objectives-results.html"><a href="mi50-contradictory-objectives-results.html#activation-gene-coverage-8"><i class="fa fa-check"></i><b>8.4.2</b> Activation gene coverage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html"><i class="fa fa-check"></i><b>9</b> MI50: Multi-path exploration results</a><ul>
+<li class="chapter" data-level="9.1" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#analysis-dependencies-7"><i class="fa fa-check"></i><b>9.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="9.2" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#truncation-selection-7"><i class="fa fa-check"></i><b>9.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#performance-3"><i class="fa fa-check"></i><b>9.2.1</b> Performance</a></li>
+<li class="chapter" data-level="9.2.2" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#generation-satisfactory-solution-found-14"><i class="fa fa-check"></i><b>9.2.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="9.2.3" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#activation-gene-coverage-9"><i class="fa fa-check"></i><b>9.2.3</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#tournament-selection-7"><i class="fa fa-check"></i><b>9.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#performance-4"><i class="fa fa-check"></i><b>9.3.1</b> Performance</a></li>
+<li class="chapter" data-level="9.3.2" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#generation-satisfactory-solution-found-15"><i class="fa fa-check"></i><b>9.3.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="9.3.3" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#activation-gene-coverage-10"><i class="fa fa-check"></i><b>9.3.3</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#lexicase-selection-7"><i class="fa fa-check"></i><b>9.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#performance-5"><i class="fa fa-check"></i><b>9.4.1</b> Performance</a></li>
+<li class="chapter" data-level="9.4.2" data-path="mi50-multi-path-exploration-results.html"><a href="mi50-multi-path-exploration-results.html#activation-gene-coverage-11"><i class="fa fa-check"></i><b>9.4.2</b> Activation gene coverage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html"><i class="fa fa-check"></i><b>10</b> MI5000: Exploitation rate results</a><ul>
+<li class="chapter" data-level="10.1" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#analysis-dependencies-8"><i class="fa fa-check"></i><b>10.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="10.2" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#truncation-selection-8"><i class="fa fa-check"></i><b>10.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#performance-over-time-18"><i class="fa fa-check"></i><b>10.2.1</b> Performance over time</a></li>
+<li class="chapter" data-level="10.2.2" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#generation-satisfactory-solution-found-16"><i class="fa fa-check"></i><b>10.2.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="10.2.3" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#stats-56"><i class="fa fa-check"></i><b>10.2.3</b> Stats</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#tournament-selection-8"><i class="fa fa-check"></i><b>10.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#performance-over-time-19"><i class="fa fa-check"></i><b>10.3.1</b> Performance over time</a></li>
+<li class="chapter" data-level="10.3.2" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#generation-satisfactory-solution-found-17"><i class="fa fa-check"></i><b>10.3.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="10.3.3" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#stats-57"><i class="fa fa-check"></i><b>10.3.3</b> Stats</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#lexicase-selection-8"><i class="fa fa-check"></i><b>10.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#performance-over-time-20"><i class="fa fa-check"></i><b>10.4.1</b> Performance over time</a></li>
+<li class="chapter" data-level="10.4.2" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#generation-satisfactory-solution-found-18"><i class="fa fa-check"></i><b>10.4.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="10.4.3" data-path="mi5000-exploitation-rate-results.html"><a href="mi5000-exploitation-rate-results.html#stats-58"><i class="fa fa-check"></i><b>10.4.3</b> Stats</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html"><i class="fa fa-check"></i><b>11</b> MI5000: Ordered exploitation results</a><ul>
+<li class="chapter" data-level="11.1" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#analysis-dependencies-9"><i class="fa fa-check"></i><b>11.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="11.2" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#truncation-selection-9"><i class="fa fa-check"></i><b>11.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#performance-over-time-21"><i class="fa fa-check"></i><b>11.2.1</b> Performance over time</a></li>
+<li class="chapter" data-level="11.2.2" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#generation-satisfactory-solution-found-19"><i class="fa fa-check"></i><b>11.2.2</b> Generation satisfactory solution found</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#tournament-selection-9"><i class="fa fa-check"></i><b>11.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#performance-over-time-22"><i class="fa fa-check"></i><b>11.3.1</b> Performance over time</a></li>
+<li class="chapter" data-level="11.3.2" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#generation-satisfactory-solution-found-20"><i class="fa fa-check"></i><b>11.3.2</b> Generation satisfactory solution found</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#lexicase-selection-9"><i class="fa fa-check"></i><b>11.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#performance-over-time-23"><i class="fa fa-check"></i><b>11.4.1</b> Performance over time</a></li>
+<li class="chapter" data-level="11.4.2" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#best-performance-8"><i class="fa fa-check"></i><b>11.4.2</b> Best performance</a></li>
+<li class="chapter" data-level="11.4.3" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#final-performance-8"><i class="fa fa-check"></i><b>11.4.3</b> Final performance</a></li>
+<li class="chapter" data-level="11.4.4" data-path="mi5000-ordered-exploitation-results.html"><a href="mi5000-ordered-exploitation-results.html#generation-satisfactory-solution-found-21"><i class="fa fa-check"></i><b>11.4.4</b> Generation satisfactory solution found</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html"><i class="fa fa-check"></i><b>12</b> MI5000: Contradictory objectives results</a><ul>
+<li class="chapter" data-level="12.1" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#analysis-dependencies-10"><i class="fa fa-check"></i><b>12.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="12.2" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#truncation-selection-10"><i class="fa fa-check"></i><b>12.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#satisfactory-trait-coverage-6"><i class="fa fa-check"></i><b>12.2.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="12.2.2" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#activation-gene-coverage-12"><i class="fa fa-check"></i><b>12.2.2</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#tournament-selection-10"><i class="fa fa-check"></i><b>12.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#satisfactory-trait-coverage-7"><i class="fa fa-check"></i><b>12.3.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="12.3.2" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#activation-gene-coverage-13"><i class="fa fa-check"></i><b>12.3.2</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#lexicase-selection-10"><i class="fa fa-check"></i><b>12.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#satisfactory-trait-coverage-8"><i class="fa fa-check"></i><b>12.4.1</b> Satisfactory trait coverage</a></li>
+<li class="chapter" data-level="12.4.2" data-path="mi5000-contradictory-objectives-results.html"><a href="mi5000-contradictory-objectives-results.html#activation-gene-coverage-14"><i class="fa fa-check"></i><b>12.4.2</b> Activation gene coverage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html"><i class="fa fa-check"></i><b>13</b> MI5000: Multi-path exploration results</a><ul>
+<li class="chapter" data-level="13.1" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#analysis-dependencies-11"><i class="fa fa-check"></i><b>13.1</b> Analysis dependencies</a></li>
+<li class="chapter" data-level="13.2" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#truncation-selection-11"><i class="fa fa-check"></i><b>13.2</b> Truncation selection</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#performance-6"><i class="fa fa-check"></i><b>13.2.1</b> Performance</a></li>
+<li class="chapter" data-level="13.2.2" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#generation-satisfactory-solution-found-22"><i class="fa fa-check"></i><b>13.2.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="13.2.3" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#activation-gene-coverage-15"><i class="fa fa-check"></i><b>13.2.3</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#tournament-selection-11"><i class="fa fa-check"></i><b>13.3</b> Tournament selection</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#performance-7"><i class="fa fa-check"></i><b>13.3.1</b> Performance</a></li>
+<li class="chapter" data-level="13.3.2" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#generation-satisfactory-solution-found-23"><i class="fa fa-check"></i><b>13.3.2</b> Generation satisfactory solution found</a></li>
+<li class="chapter" data-level="13.3.3" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#activation-gene-coverage-16"><i class="fa fa-check"></i><b>13.3.3</b> Activation gene coverage</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#lexicase-selection-11"><i class="fa fa-check"></i><b>13.4</b> Lexicase selection</a><ul>
+<li class="chapter" data-level="13.4.1" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#performance-8"><i class="fa fa-check"></i><b>13.4.1</b> Performance</a></li>
+<li class="chapter" data-level="13.4.2" data-path="mi5000-multi-path-exploration-results.html"><a href="mi5000-multi-path-exploration-results.html#activation-gene-coverage-17"><i class="fa fa-check"></i><b>13.4.2</b> Activation gene coverage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with ❤ and bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diagnosing Island Supplemental Material</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mi5000-multi-path-exploration-results" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 13</span> MI5000: Multi-path exploration results<a href="mi5000-multi-path-exploration-results.html#mi5000-multi-path-exploration-results" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Here we present the results for the <strong>best performances</strong> and <strong>activation gene coverage</strong> generated by each selection scheme replicate on the multi-path exploration diagnostic with configurations presented below.
+For our the configuration of these experiments, we execute migrations every 50 generations and there are 4 islands in a ring topology.
+Best performance found refers to the largest average trait score found in a given population.
+Note that activation gene coverage values are gathered at the population-level.
+Activation gene coverage refers to the count of unique activation genes in a given population; this gives us a range of integers between 0 and 100.</p>
+<div id="analysis-dependencies-11" class="section level2 hasAnchor">
+<h2><span class="header-section-number">13.1</span> Analysis dependencies<a href="mi5000-multi-path-exploration-results.html#analysis-dependencies-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb639"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb639-1" title="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb639-2" title="2"><span class="kw">library</span>(cowplot)</a>
+<a class="sourceLine" id="cb639-3" title="3"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb639-4" title="4"><span class="kw">library</span>(PupillometryR)</a></code></pre></div>
+</div>
+<div id="truncation-selection-11" class="section level2 hasAnchor">
+<h2><span class="header-section-number">13.2</span> Truncation selection<a href="mi5000-multi-path-exploration-results.html#truncation-selection-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here we analyze how the different population structures affect truncation selection (size 8) on the contradictory objectives diagnostic.</p>
+<div id="performance-6" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.2.1</span> Performance<a href="mi5000-multi-path-exploration-results.html#performance-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="performance-over-time-24" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.2.1.1</span> Performance over time<a href="mi5000-multi-path-exploration-results.html#performance-over-time-24" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb640"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb640-1" title="1">lines =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb640-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(Structure, Generations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb640-3" title="3"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb640-4" title="4">    <span class="dt">min =</span> <span class="kw">min</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb640-5" title="5">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb640-6" title="6">    <span class="dt">max =</span> <span class="kw">max</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY</a>
+<a class="sourceLine" id="cb640-7" title="7">  )</a>
+<a class="sourceLine" id="cb640-8" title="8"><span class="kw">ggplot</span>(lines, <span class="kw">aes</span>(<span class="dt">x=</span>Generations, <span class="dt">y=</span>mean, <span class="dt">group =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">color =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-9" title="9"><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> min, <span class="dt">ymax =</span> max), <span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-10" title="10"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-11" title="11"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">filter</span>(lines, Generations <span class="op">%%</span><span class="st"> </span><span class="dv">2000</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>), <span class="dt">size =</span> <span class="fl">2.5</span>, <span class="dt">stroke =</span> <span class="fl">2.0</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-12" title="12"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb640-13" title="13">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb640-14" title="14">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-15" title="15"><span class="st">  </span><span class="kw">scale_x_continuous</span>(</a>
+<a class="sourceLine" id="cb640-16" title="16">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span>,</a>
+<a class="sourceLine" id="cb640-17" title="17">    <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb640-18" title="18">    <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10000</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb640-19" title="19">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;0e+4&quot;</span>, <span class="st">&quot;1e+4&quot;</span>, <span class="st">&quot;2e+4&quot;</span>, <span class="st">&quot;3e+4&quot;</span>, <span class="st">&quot;4e+4&quot;</span>, <span class="st">&quot;5e+4&quot;</span>)</a>
+<a class="sourceLine" id="cb640-20" title="20"></a>
+<a class="sourceLine" id="cb640-21" title="21">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-22" title="22"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb640-23" title="23"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-24" title="24"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-25" title="25"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Performance over time&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb640-26" title="26"><span class="st">  </span>p_theme</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tru-mpe-perf-1.png" width="672" /></p>
+</div>
+<div id="best-performance-9" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.2.1.2</span> Best performance<a href="mi5000-multi-path-exploration-results.html#best-performance-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb641"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb641-1" title="1"><span class="kw">filter</span>(mi5000_best, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>VAR <span class="op">==</span><span class="st"> &#39;pop_fit_max&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb641-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> VAL <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-3" title="3"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-6" title="6"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb641-7" title="7">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb641-8" title="8">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-9" title="9"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb641-10" title="10">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb641-11" title="11">  )<span class="op">+</span></a>
+<a class="sourceLine" id="cb641-12" title="12"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb641-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette, ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb641-15" title="15"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Best performance&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb641-16" title="16"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tru-mpe-per-bst-1.png" width="672" /></p>
+<div id="stats-73" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.2.1.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-73" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb642"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb642-1" title="1">performance =<span class="st"> </span><span class="kw">filter</span>(mi5000_best, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>VAR <span class="op">==</span><span class="st"> &#39;pop_fit_max&#39;</span>)</a>
+<a class="sourceLine" id="cb642-2" title="2">performance <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb642-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb642-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb642-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb642-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(VAL)),</a>
+<a class="sourceLine" id="cb642-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb642-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb642-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb642-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb642-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY</a>
+<a class="sourceLine" id="cb642-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 EA          100      0   6     52.5  50.6 100.   45.0
+## 2 IS          100      0  25.0   82.5  79.7  99.9  20.2
+## 3 NMIS        100      0  23.0   82.0  79.7  99.9  20.5</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among selection schemes.</p>
+<div class="sourceCode" id="cb644"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb644-1" title="1"><span class="kw">kruskal.test</span>(VAL <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> performance)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  VAL by Structure
+## Kruskal-Wallis chi-squared = 75.468, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.</p>
+<div class="sourceCode" id="cb646"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb646-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> performance<span class="op">$</span>VAL, <span class="dt">g =</span> performance<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb646-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  performance$VAL and performance$Structure 
+## 
+##      EA      IS
+## IS   8.2e-14 - 
+## NMIS 8.7e-14 1 
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+<div id="final-performance-9" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.2.1.3</span> Final performance<a href="mi5000-multi-path-exploration-results.html#final-performance-9" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb648"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb648-1" title="1"><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb648-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-3" title="3"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-6" title="6"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb648-7" title="7">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb648-8" title="8">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-9" title="9"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb648-10" title="10">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb648-11" title="11">  )<span class="op">+</span></a>
+<a class="sourceLine" id="cb648-12" title="12"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb648-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette, ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb648-15" title="15"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Final performance&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb648-16" title="16"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tru-mpe-per-end-1.png" width="672" /></p>
+<div id="stats-74" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.2.1.3.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-74" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb649"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb649-1" title="1">performance =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>)</a>
+<a class="sourceLine" id="cb649-2" title="2">performance <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb649-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb649-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb649-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb649-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(pop_fit_max)),</a>
+<a class="sourceLine" id="cb649-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb649-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb649-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb649-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb649-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb649-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 EA          100      0   6     52.5  50.6 100.   45.0
+## 2 IS          100      0  25.0   82.5  79.7  99.9  20.2
+## 3 NMIS        100      0  23.0   82.0  79.7  99.9  20.5</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among selection schemes.</p>
+<div class="sourceCode" id="cb651"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb651-1" title="1"><span class="kw">kruskal.test</span>(pop_fit_max <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> performance)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  pop_fit_max by Structure
+## Kruskal-Wallis chi-squared = 75.468, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.</p>
+<div class="sourceCode" id="cb653"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb653-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> performance<span class="op">$</span>pop_fit_max, <span class="dt">g =</span> performance<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb653-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  performance$pop_fit_max and performance$Structure 
+## 
+##      EA      IS
+## IS   8.2e-14 - 
+## NMIS 8.7e-14 1 
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+</div>
+<div id="generation-satisfactory-solution-found-22" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.2.2</span> Generation satisfactory solution found<a href="mi5000-multi-path-exploration-results.html#generation-satisfactory-solution-found-22" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb655"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb655-1" title="1"><span class="kw">filter</span>(mi5000_ssf, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span><span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">&lt;=</span><span class="st"> </span>GENERATIONS) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb655-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> Generations, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-3" title="3"><span class="st">    </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-6" title="6"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb655-7" title="7"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb655-8" title="8">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span></a>
+<a class="sourceLine" id="cb655-9" title="9">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-10" title="10"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb655-11" title="11">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb655-12" title="12">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb655-15" title="15"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tru-mpe-ssf-1.png" width="672" /></p>
+<div id="stats-75" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.2.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-75" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb656"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb656-1" title="1">ssf =<span class="st"> </span><span class="kw">filter</span>(mi5000_ssf, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">&lt;</span><span class="st"> </span><span class="dv">60000</span>)</a>
+<a class="sourceLine" id="cb656-2" title="2">ssf <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb656-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb656-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb656-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb656-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(Generations)),</a>
+<a class="sourceLine" id="cb656-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb656-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb656-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb656-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb656-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb656-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
+## 1 EA            1      0 15409  15409 15409 15409     0
+## 2 IS            2      0 27080  27572 27572 28064   492
+## 3 NMIS          2      0 28220  28512 28512 28804   292</code></pre>
+<p>Kruskal–Wallis test provides evidence of no difference among selection schemes.</p>
+<div class="sourceCode" id="cb658"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb658-1" title="1"><span class="kw">kruskal.test</span>(Generations <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> ssf)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  Generations by Structure
+## Kruskal-Wallis chi-squared = 3.6, df = 2, p-value = 0.1653</code></pre>
+</div>
+</div>
+<div id="activation-gene-coverage-15" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.2.3</span> Activation gene coverage<a href="mi5000-multi-path-exploration-results.html#activation-gene-coverage-15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Activation gene coverage analysis.</p>
+<div id="coverage-over-time-24" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.2.3.1</span> Coverage over time<a href="mi5000-multi-path-exploration-results.html#coverage-over-time-24" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Activation gene coverage over time.</p>
+<div class="sourceCode" id="cb660"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb660-1" title="1"><span class="co"># data for lines and shading on plots</span></a>
+<a class="sourceLine" id="cb660-2" title="2">lines =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb660-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure, Generations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb660-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb660-5" title="5">    <span class="dt">min =</span> <span class="kw">min</span>(pop_act_cov),</a>
+<a class="sourceLine" id="cb660-6" title="6">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_act_cov),</a>
+<a class="sourceLine" id="cb660-7" title="7">    <span class="dt">max =</span> <span class="kw">max</span>(pop_act_cov)</a>
+<a class="sourceLine" id="cb660-8" title="8">  )</a></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Structure&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb662"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb662-1" title="1"><span class="kw">ggplot</span>(lines, <span class="kw">aes</span>(<span class="dt">x=</span>Generations, <span class="dt">y=</span>mean, <span class="dt">group =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">color =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-2" title="2"><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> min, <span class="dt">ymax =</span> max), <span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-3" title="3"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">filter</span>(lines, Generations <span class="op">%%</span><span class="st"> </span><span class="dv">2000</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">stroke =</span> <span class="fl">2.0</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-5" title="5"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb662-6" title="6">    <span class="dt">name=</span><span class="st">&quot;Coverage&quot;</span></a>
+<a class="sourceLine" id="cb662-7" title="7">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-8" title="8"><span class="st">  </span><span class="kw">scale_x_continuous</span>(</a>
+<a class="sourceLine" id="cb662-9" title="9">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span>,</a>
+<a class="sourceLine" id="cb662-10" title="10">    <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb662-11" title="11">    <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10000</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb662-12" title="12">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;0e+4&quot;</span>, <span class="st">&quot;1e+4&quot;</span>, <span class="st">&quot;2e+4&quot;</span>, <span class="st">&quot;3e+4&quot;</span>, <span class="st">&quot;4e+4&quot;</span>, <span class="st">&quot;5e+4&quot;</span>)</a>
+<a class="sourceLine" id="cb662-13" title="13"></a>
+<a class="sourceLine" id="cb662-14" title="14">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-15" title="15"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb662-16" title="16"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-17" title="17"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb662-18" title="18"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Activation gene coverage over time&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb662-19" title="19"><span class="st">  </span>p_theme</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-mpe-act-tru-ot-1.png" width="672" /></p>
+</div>
+<div id="end-of-50000-generations-24" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.2.3.2</span> End of 50,000 generations<a href="mi5000-multi-path-exploration-results.html#end-of-50000-generations-24" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Activation gene coverage in the population at the end of 50,000 generations.</p>
+<div class="sourceCode" id="cb663"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb663-1" title="1"><span class="co">### end of run</span></a>
+<a class="sourceLine" id="cb663-2" title="2"><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb663-3" title="3"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> pop_act_cov, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-4" title="4"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-5" title="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">height =</span> <span class="fl">.05</span>, <span class="dt">width =</span> <span class="fl">.05</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-6" title="6"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-7" title="7"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb663-8" title="8"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb663-9" title="9">    <span class="dt">name=</span><span class="st">&quot;Coverage&quot;</span></a>
+<a class="sourceLine" id="cb663-10" title="10">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-11" title="11"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb663-12" title="12">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb663-13" title="13">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-14" title="14"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-15" title="15"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb663-16" title="16"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Final activation gene coverage&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb663-17" title="17"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-mpe-act-tru-end-1.png" width="672" /></p>
+<div id="stats-76" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.2.3.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-76" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for activation gene coverage.</p>
+<div class="sourceCode" id="cb664"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb664-1" title="1">coverage =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TRUNCATION&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>)</a>
+<a class="sourceLine" id="cb664-2" title="2">coverage <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb664-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb664-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb664-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb664-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(pop_act_cov)),</a>
+<a class="sourceLine" id="cb664-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb664-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb664-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb664-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb664-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb664-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
+## 1 EA          100      0     1      2  1.97     3     0
+## 2 IS          100      0     1      2  2.02     3     0
+## 3 NMIS        100      0     3      6  6.33     8     1</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among activation gene coverage.</p>
+<div class="sourceCode" id="cb666"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb666-1" title="1"><span class="kw">kruskal.test</span>(pop_act_cov <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> coverage)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  pop_act_cov by Structure
+## Kruskal-Wallis chi-squared = 269.84, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.</p>
+<div class="sourceCode" id="cb668"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb668-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> coverage<span class="op">$</span>pop_act_cov, <span class="dt">g =</span> coverage<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb668-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  coverage$pop_act_cov and coverage$Structure 
+## 
+##      EA     IS    
+## IS   0.15   -     
+## NMIS &lt;2e-16 &lt;2e-16
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="tournament-selection-11" class="section level2 hasAnchor">
+<h2><span class="header-section-number">13.3</span> Tournament selection<a href="mi5000-multi-path-exploration-results.html#tournament-selection-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here we analyze how the different population structures affect tournament selection (size 8) on the contradictory objectives diagnostic.</p>
+<div id="performance-7" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.3.1</span> Performance<a href="mi5000-multi-path-exploration-results.html#performance-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="performance-over-time-25" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.3.1.1</span> Performance over time<a href="mi5000-multi-path-exploration-results.html#performance-over-time-25" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb670"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb670-1" title="1">lines =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb670-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(Structure, Generations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb670-3" title="3"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb670-4" title="4">    <span class="dt">min =</span> <span class="kw">min</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb670-5" title="5">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb670-6" title="6">    <span class="dt">max =</span> <span class="kw">max</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY</a>
+<a class="sourceLine" id="cb670-7" title="7">  )</a>
+<a class="sourceLine" id="cb670-8" title="8"><span class="kw">ggplot</span>(lines, <span class="kw">aes</span>(<span class="dt">x=</span>Generations, <span class="dt">y=</span>mean, <span class="dt">group =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">color =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-9" title="9"><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> min, <span class="dt">ymax =</span> max), <span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-10" title="10"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-11" title="11"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">filter</span>(lines, Generations <span class="op">%%</span><span class="st"> </span><span class="dv">2000</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>), <span class="dt">size =</span> <span class="fl">2.5</span>, <span class="dt">stroke =</span> <span class="fl">2.0</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-12" title="12"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb670-13" title="13">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb670-14" title="14">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-15" title="15"><span class="st">  </span><span class="kw">scale_x_continuous</span>(</a>
+<a class="sourceLine" id="cb670-16" title="16">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span>,</a>
+<a class="sourceLine" id="cb670-17" title="17">    <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb670-18" title="18">    <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10000</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb670-19" title="19">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;0e+4&quot;</span>, <span class="st">&quot;1e+4&quot;</span>, <span class="st">&quot;2e+4&quot;</span>, <span class="st">&quot;3e+4&quot;</span>, <span class="st">&quot;4e+4&quot;</span>, <span class="st">&quot;5e+4&quot;</span>)</a>
+<a class="sourceLine" id="cb670-20" title="20"></a>
+<a class="sourceLine" id="cb670-21" title="21">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-22" title="22"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb670-23" title="23"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-24" title="24"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-25" title="25"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Performance over time&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb670-26" title="26"><span class="st">  </span>p_theme</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tor-mpe-perf-1.png" width="672" /></p>
+</div>
+<div id="best-performance-10" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.3.1.2</span> Best performance<a href="mi5000-multi-path-exploration-results.html#best-performance-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb671"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb671-1" title="1"><span class="kw">filter</span>(mi5000_best, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>VAR <span class="op">==</span><span class="st"> &#39;pop_fit_max&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb671-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> VAL <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-3" title="3"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-6" title="6"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb671-7" title="7">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb671-8" title="8">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-9" title="9"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb671-10" title="10">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb671-11" title="11">  )<span class="op">+</span></a>
+<a class="sourceLine" id="cb671-12" title="12"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb671-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette, ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb671-15" title="15"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Best performance&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb671-16" title="16"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tor-mpe-per-bst-1.png" width="672" /></p>
+<div id="stats-77" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.3.1.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-77" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb672"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb672-1" title="1">performance =<span class="st"> </span><span class="kw">filter</span>(mi5000_best, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>VAR <span class="op">==</span><span class="st"> &#39;pop_fit_max&#39;</span>)</a>
+<a class="sourceLine" id="cb672-2" title="2">performance <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb672-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb672-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb672-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb672-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(VAL)),</a>
+<a class="sourceLine" id="cb672-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb672-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb672-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb672-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb672-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY</a>
+<a class="sourceLine" id="cb672-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 EA          100      0   5     54.5  53.9  99.9  46.0
+## 2 IS          100      0  23.0   82.9  79.5  99.8  23.2
+## 3 NMIS        100      0  27.0   85.9  81.6  99.8  23.1</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among selection schemes.</p>
+<div class="sourceCode" id="cb674"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb674-1" title="1"><span class="kw">kruskal.test</span>(VAL <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> performance)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  VAL by Structure
+## Kruskal-Wallis chi-squared = 63.856, df = 2, p-value = 1.361e-14</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.</p>
+<div class="sourceCode" id="cb676"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb676-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> performance<span class="op">$</span>VAL, <span class="dt">g =</span> performance<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb676-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  performance$VAL and performance$Structure 
+## 
+##      EA      IS  
+## IS   6.2e-11 -   
+## NMIS 1.5e-12 0.37
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+<div id="final-performance-10" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.3.1.3</span> Final performance<a href="mi5000-multi-path-exploration-results.html#final-performance-10" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb678"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb678-1" title="1"><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb678-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-3" title="3"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-6" title="6"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb678-7" title="7">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb678-8" title="8">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-9" title="9"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb678-10" title="10">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb678-11" title="11">  )<span class="op">+</span></a>
+<a class="sourceLine" id="cb678-12" title="12"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb678-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette, ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb678-15" title="15"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Final performance&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb678-16" title="16"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tor-mpe-per-end-1.png" width="672" /></p>
+<div id="stats-78" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.3.1.3.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-78" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb679-1" title="1">performance =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>)</a>
+<a class="sourceLine" id="cb679-2" title="2">performance <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb679-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb679-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb679-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb679-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(pop_fit_max)),</a>
+<a class="sourceLine" id="cb679-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb679-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb679-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb679-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb679-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb679-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 EA          100      0   5     54.5  53.9  99.9  46.0
+## 2 IS          100      0  23.0   82.9  79.5  99.8  23.2
+## 3 NMIS        100      0  27.0   85.9  81.6  99.8  23.1</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among selection schemes.</p>
+<div class="sourceCode" id="cb681"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb681-1" title="1"><span class="kw">kruskal.test</span>(pop_fit_max <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> performance)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  pop_fit_max by Structure
+## Kruskal-Wallis chi-squared = 63.856, df = 2, p-value = 1.361e-14</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.</p>
+<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb683-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> performance<span class="op">$</span>pop_fit_max, <span class="dt">g =</span> performance<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb683-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  performance$pop_fit_max and performance$Structure 
+## 
+##      EA      IS  
+## IS   6.2e-11 -   
+## NMIS 1.5e-12 0.37
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+</div>
+<div id="generation-satisfactory-solution-found-23" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.3.2</span> Generation satisfactory solution found<a href="mi5000-multi-path-exploration-results.html#generation-satisfactory-solution-found-23" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb685-1" title="1"><span class="kw">filter</span>(mi5000_ssf, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span><span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">&lt;=</span><span class="st"> </span>GENERATIONS) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb685-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> Generations, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-3" title="3"><span class="st">    </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-6" title="6"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb685-7" title="7"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb685-8" title="8">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span></a>
+<a class="sourceLine" id="cb685-9" title="9">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-10" title="10"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb685-11" title="11">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb685-12" title="12">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb685-15" title="15"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-tor-mpe-ssf-1.png" width="672" /></p>
+<div id="stats-79" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.3.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-79" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb686"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb686-1" title="1">ssf =<span class="st"> </span><span class="kw">filter</span>(mi5000_ssf, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">&lt;</span><span class="st"> </span><span class="dv">60000</span>)</a>
+<a class="sourceLine" id="cb686-2" title="2">ssf <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb686-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb686-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb686-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb686-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(Generations)),</a>
+<a class="sourceLine" id="cb686-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb686-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb686-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb686-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb686-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(Generations, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb686-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median   mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
+## 1 EA            1      0 27835  27835 27835  27835    0 
+## 2 IS            4      0 35249  36223 36015. 36364  445.
+## 3 NMIS          9      0 36235  37567 37498. 39029  681</code></pre>
+<p>Kruskal–Wallis test provides evidence of no difference among selection schemes.</p>
+<div class="sourceCode" id="cb688"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb688-1" title="1"><span class="kw">kruskal.test</span>(Generations <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> ssf)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  Generations by Structure
+## Kruskal-Wallis chi-squared = 6.6444, df = 2, p-value = 0.03607</code></pre>
+<div class="sourceCode" id="cb690"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb690-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> ssf<span class="op">$</span>Generations, <span class="dt">g =</span> ssf<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb690-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum exact test 
+## 
+## data:  ssf$Generations and ssf$Structure 
+## 
+##      EA   IS  
+## IS   0.60 -   
+## NMIS 0.30 0.05
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+<div id="activation-gene-coverage-16" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.3.3</span> Activation gene coverage<a href="mi5000-multi-path-exploration-results.html#activation-gene-coverage-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Activation gene coverage analysis.</p>
+<div id="coverage-over-time-25" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.3.3.1</span> Coverage over time<a href="mi5000-multi-path-exploration-results.html#coverage-over-time-25" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Activation gene coverage over time.</p>
+<div class="sourceCode" id="cb692"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb692-1" title="1"><span class="co"># data for lines and shading on plots</span></a>
+<a class="sourceLine" id="cb692-2" title="2">lines =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb692-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure, Generations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb692-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb692-5" title="5">    <span class="dt">min =</span> <span class="kw">min</span>(pop_act_cov),</a>
+<a class="sourceLine" id="cb692-6" title="6">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_act_cov),</a>
+<a class="sourceLine" id="cb692-7" title="7">    <span class="dt">max =</span> <span class="kw">max</span>(pop_act_cov)</a>
+<a class="sourceLine" id="cb692-8" title="8">  )</a></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Structure&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb694"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb694-1" title="1"><span class="kw">ggplot</span>(lines, <span class="kw">aes</span>(<span class="dt">x=</span>Generations, <span class="dt">y=</span>mean, <span class="dt">group =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">color =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-2" title="2"><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> min, <span class="dt">ymax =</span> max), <span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-3" title="3"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">filter</span>(lines, Generations <span class="op">%%</span><span class="st"> </span><span class="dv">2000</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">stroke =</span> <span class="fl">2.0</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-5" title="5"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb694-6" title="6">    <span class="dt">name=</span><span class="st">&quot;Coverage&quot;</span></a>
+<a class="sourceLine" id="cb694-7" title="7">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-8" title="8"><span class="st">  </span><span class="kw">scale_x_continuous</span>(</a>
+<a class="sourceLine" id="cb694-9" title="9">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span>,</a>
+<a class="sourceLine" id="cb694-10" title="10">    <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb694-11" title="11">    <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10000</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb694-12" title="12">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;0e+4&quot;</span>, <span class="st">&quot;1e+4&quot;</span>, <span class="st">&quot;2e+4&quot;</span>, <span class="st">&quot;3e+4&quot;</span>, <span class="st">&quot;4e+4&quot;</span>, <span class="st">&quot;5e+4&quot;</span>)</a>
+<a class="sourceLine" id="cb694-13" title="13"></a>
+<a class="sourceLine" id="cb694-14" title="14">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-15" title="15"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb694-16" title="16"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-17" title="17"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb694-18" title="18"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Activation gene coverage over time&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb694-19" title="19"><span class="st">  </span>p_theme</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-mpe-act-tor-ot-1.png" width="672" /></p>
+</div>
+<div id="end-of-50000-generations-25" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.3.3.2</span> End of 50,000 generations<a href="mi5000-multi-path-exploration-results.html#end-of-50000-generations-25" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Activation gene coverage in the population at the end of 50,000 generations.</p>
+<div class="sourceCode" id="cb695"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb695-1" title="1"><span class="co">### end of run</span></a>
+<a class="sourceLine" id="cb695-2" title="2"><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb695-3" title="3"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> pop_act_cov, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-4" title="4"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-5" title="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">height =</span> <span class="fl">.05</span>, <span class="dt">width =</span> <span class="fl">.05</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-6" title="6"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-7" title="7"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb695-8" title="8"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb695-9" title="9">    <span class="dt">name=</span><span class="st">&quot;Coverage&quot;</span></a>
+<a class="sourceLine" id="cb695-10" title="10">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-11" title="11"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb695-12" title="12">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb695-13" title="13">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-14" title="14"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-15" title="15"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb695-16" title="16"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Final activation gene coverage&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb695-17" title="17"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-mpe-act-tor-end-1.png" width="672" /></p>
+<div id="stats-80" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.3.3.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-80" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for activation gene coverage.</p>
+<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb696-1" title="1">coverage =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;TOURNAMENT&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>)</a>
+<a class="sourceLine" id="cb696-2" title="2">coverage <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb696-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb696-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb696-5" title="5">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb696-6" title="6">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(pop_act_cov)),</a>
+<a class="sourceLine" id="cb696-7" title="7">    <span class="dt">min =</span> <span class="kw">min</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb696-8" title="8">    <span class="dt">median =</span> <span class="kw">median</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb696-9" title="9">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb696-10" title="10">    <span class="dt">max =</span> <span class="kw">max</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb696-11" title="11">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb696-12" title="12">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
+## 1 EA          100      0     1      2  1.99     3     0
+## 2 IS          100      0     1      2  2.01     3     0
+## 3 NMIS        100      0     4      6  6.2      8     2</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among activation gene coverage.</p>
+<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb698-1" title="1"><span class="kw">kruskal.test</span>(pop_act_cov <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> coverage)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  pop_act_cov by Structure
+## Kruskal-Wallis chi-squared = 265.43, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.</p>
+<div class="sourceCode" id="cb700"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb700-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> coverage<span class="op">$</span>pop_act_cov, <span class="dt">g =</span> coverage<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb700-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;g&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  coverage$pop_act_cov and coverage$Structure 
+## 
+##      EA     IS    
+## IS   0.85   -     
+## NMIS &lt;2e-16 &lt;2e-16
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="lexicase-selection-11" class="section level2 hasAnchor">
+<h2><span class="header-section-number">13.4</span> Lexicase selection<a href="mi5000-multi-path-exploration-results.html#lexicase-selection-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here we analyze how the different population structures affect standard lexicase selection on the contradictory objectives diagnostic.</p>
+<div id="performance-8" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.4.1</span> Performance<a href="mi5000-multi-path-exploration-results.html#performance-8" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="performance-over-time-26" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.4.1.1</span> Performance over time<a href="mi5000-multi-path-exploration-results.html#performance-over-time-26" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb702"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb702-1" title="1">lines =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb702-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(Structure, Generations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb702-3" title="3"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb702-4" title="4">    <span class="dt">min =</span> <span class="kw">min</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb702-5" title="5">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb702-6" title="6">    <span class="dt">max =</span> <span class="kw">max</span>(pop_fit_max) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY</a>
+<a class="sourceLine" id="cb702-7" title="7">  )</a>
+<a class="sourceLine" id="cb702-8" title="8"><span class="kw">ggplot</span>(lines, <span class="kw">aes</span>(<span class="dt">x=</span>Generations, <span class="dt">y=</span>mean, <span class="dt">group =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">color =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-9" title="9"><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> min, <span class="dt">ymax =</span> max), <span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-10" title="10"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-11" title="11"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">filter</span>(lines, Generations <span class="op">%%</span><span class="st"> </span><span class="dv">2000</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>), <span class="dt">size =</span> <span class="fl">2.5</span>, <span class="dt">stroke =</span> <span class="fl">2.0</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-12" title="12"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb702-13" title="13">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb702-14" title="14">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-15" title="15"><span class="st">  </span><span class="kw">scale_x_continuous</span>(</a>
+<a class="sourceLine" id="cb702-16" title="16">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span>,</a>
+<a class="sourceLine" id="cb702-17" title="17">    <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb702-18" title="18">    <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10000</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb702-19" title="19">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;0e+4&quot;</span>, <span class="st">&quot;1e+4&quot;</span>, <span class="st">&quot;2e+4&quot;</span>, <span class="st">&quot;3e+4&quot;</span>, <span class="st">&quot;4e+4&quot;</span>, <span class="st">&quot;5e+4&quot;</span>)</a>
+<a class="sourceLine" id="cb702-20" title="20"></a>
+<a class="sourceLine" id="cb702-21" title="21">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-22" title="22"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb702-23" title="23"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-24" title="24"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-25" title="25"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Performance over time&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb702-26" title="26"><span class="st">  </span>p_theme</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-lex-mpe-perf-1.png" width="672" /></p>
+</div>
+<div id="best-performance-11" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.4.1.2</span> Best performance<a href="mi5000-multi-path-exploration-results.html#best-performance-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb703-1" title="1"><span class="kw">filter</span>(mi5000_best, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span> <span class="op">&amp;</span><span class="st"> </span>VAR <span class="op">==</span><span class="st"> &#39;pop_fit_max&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb703-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> VAL <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-3" title="3"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-6" title="6"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb703-7" title="7">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb703-8" title="8">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-9" title="9"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb703-10" title="10">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb703-11" title="11">  )<span class="op">+</span></a>
+<a class="sourceLine" id="cb703-12" title="12"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb703-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette, ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb703-15" title="15"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Best performance&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb703-16" title="16"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-lex-mpe-per-bst-1.png" width="672" /></p>
+<div id="stats-81" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.4.1.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-81" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb704-1" title="1">performance =<span class="st"> </span><span class="kw">filter</span>(mi5000_best, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span> <span class="op">&amp;</span><span class="st"> </span>VAR <span class="op">==</span><span class="st"> &#39;pop_fit_max&#39;</span>)</a>
+<a class="sourceLine" id="cb704-2" title="2">performance<span class="op">$</span>Structure =<span class="st"> </span><span class="kw">factor</span>(performance<span class="op">$</span>Structure, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&#39;EA&#39;</span>,<span class="st">&#39;NMIS&#39;</span>,<span class="st">&#39;IS&#39;</span>))</a>
+<a class="sourceLine" id="cb704-3" title="3">performance <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb704-4" title="4"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb704-5" title="5"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb704-6" title="6">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb704-7" title="7">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(VAL)),</a>
+<a class="sourceLine" id="cb704-8" title="8">    <span class="dt">min =</span> <span class="kw">min</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb704-9" title="9">    <span class="dt">median =</span> <span class="kw">median</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb704-10" title="10">    <span class="dt">mean =</span> <span class="kw">mean</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb704-11" title="11">    <span class="dt">max =</span> <span class="kw">max</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY,</a>
+<a class="sourceLine" id="cb704-12" title="12">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(VAL, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) <span class="op">/</span><span class="st"> </span>DIMENSIONALITY</a>
+<a class="sourceLine" id="cb704-13" title="13">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 EA          100      0  85.5   93.2  92.8  98.3  4.39
+## 2 NMIS        100      0  67.5   76.7  76.2  84.6  4.57
+## 3 IS          100      0  66.5   76.3  76.4  85.5  6.01</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among selection schemes.</p>
+<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb706-1" title="1"><span class="kw">kruskal.test</span>(VAL <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> performance)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  VAL by Structure
+## Kruskal-Wallis chi-squared = 199.33, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.</p>
+<div class="sourceCode" id="cb708"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb708-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> performance<span class="op">$</span>VAL, <span class="dt">g =</span> performance<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb708-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  performance$VAL and performance$Structure 
+## 
+##      EA     NMIS
+## NMIS &lt;2e-16 -   
+## IS   &lt;2e-16 1   
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+<div id="final-performance-11" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.4.1.3</span> Final performance<a href="mi5000-multi-path-exploration-results.html#final-performance-11" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>First generation a satisfactory solution is found throughout the 50,000 generations.</p>
+<div class="sourceCode" id="cb710"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb710-1" title="1"><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb710-2" title="2"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-3" title="3"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">width =</span> <span class="fl">.1</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-5" title="5"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-6" title="6"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb710-7" title="7">    <span class="dt">name=</span><span class="st">&quot;Average trait score&quot;</span></a>
+<a class="sourceLine" id="cb710-8" title="8">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-9" title="9"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb710-10" title="10">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb710-11" title="11">  )<span class="op">+</span></a>
+<a class="sourceLine" id="cb710-12" title="12"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb710-13" title="13"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette, ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-14" title="14"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb710-15" title="15"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Final performance&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb710-16" title="16"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-lex-mpe-per-end-1.png" width="672" /></p>
+<div id="stats-82" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.4.1.3.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-82" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for the first generation a satisfactory solution is found.</p>
+<div class="sourceCode" id="cb711"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb711-1" title="1">performance =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>)</a>
+<a class="sourceLine" id="cb711-2" title="2">performance<span class="op">$</span>Structure =<span class="st"> </span><span class="kw">factor</span>(performance<span class="op">$</span>Structure, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&#39;EA&#39;</span>,<span class="st">&#39;NMIS&#39;</span>,<span class="st">&#39;IS&#39;</span>))</a>
+<a class="sourceLine" id="cb711-3" title="3">performance <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb711-4" title="4"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb711-5" title="5"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb711-6" title="6">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb711-7" title="7">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(pop_fit_max)),</a>
+<a class="sourceLine" id="cb711-8" title="8">    <span class="dt">min =</span> <span class="kw">min</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb711-9" title="9">    <span class="dt">median =</span> <span class="kw">median</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb711-10" title="10">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb711-11" title="11">    <span class="dt">max =</span> <span class="kw">max</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb711-12" title="12">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(pop_fit_max <span class="op">/</span><span class="st"> </span>DIMENSIONALITY, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb711-13" title="13">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 EA          100      0  78.5   90.3  90.5  98.3  4.98
+## 2 NMIS        100      0  63.0   74.1  73.9  83.5  6.57
+## 3 IS          100      0  58.6   73.4  73.9  85.5  6.47</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among selection schemes.</p>
+<div class="sourceCode" id="cb713"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb713-1" title="1"><span class="kw">kruskal.test</span>(pop_fit_max <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> performance)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  pop_fit_max by Structure
+## Kruskal-Wallis chi-squared = 196.97, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.</p>
+<div class="sourceCode" id="cb715"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb715-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> performance<span class="op">$</span>pop_fit_max, <span class="dt">g =</span> performance<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb715-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  performance$pop_fit_max and performance$Structure 
+## 
+##      EA     NMIS
+## NMIS &lt;2e-16 -   
+## IS   &lt;2e-16 1   
+## 
+## P value adjustment method: bonferroni</code></pre>
+</div>
+</div>
+</div>
+<div id="activation-gene-coverage-17" class="section level3 hasAnchor">
+<h3><span class="header-section-number">13.4.2</span> Activation gene coverage<a href="mi5000-multi-path-exploration-results.html#activation-gene-coverage-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Activation gene coverage analysis.</p>
+<div id="coverage-over-time-26" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.4.2.1</span> Coverage over time<a href="mi5000-multi-path-exploration-results.html#coverage-over-time-26" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Activation gene coverage over time.</p>
+<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb717-1" title="1"><span class="co"># data for lines and shading on plots</span></a>
+<a class="sourceLine" id="cb717-2" title="2">lines =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb717-3" title="3"><span class="st">  </span><span class="kw">group_by</span>(Structure, Generations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb717-4" title="4"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb717-5" title="5">    <span class="dt">min =</span> <span class="kw">min</span>(pop_act_cov),</a>
+<a class="sourceLine" id="cb717-6" title="6">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_act_cov),</a>
+<a class="sourceLine" id="cb717-7" title="7">    <span class="dt">max =</span> <span class="kw">max</span>(pop_act_cov)</a>
+<a class="sourceLine" id="cb717-8" title="8">  )</a></code></pre></div>
+<pre><code>## `summarise()` has grouped output by &#39;Structure&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb719"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb719-1" title="1"><span class="kw">ggplot</span>(lines, <span class="kw">aes</span>(<span class="dt">x=</span>Generations, <span class="dt">y=</span>mean, <span class="dt">group =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">color =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-2" title="2"><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="kw">aes</span>(<span class="dt">ymin =</span> min, <span class="dt">ymax =</span> max), <span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-3" title="3"><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">size =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data =</span> <span class="kw">filter</span>(lines, Generations <span class="op">%%</span><span class="st"> </span><span class="dv">2000</span> <span class="op">==</span><span class="st"> </span><span class="dv">0</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">stroke =</span> <span class="fl">2.0</span>, <span class="dt">alpha =</span> <span class="fl">1.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-5" title="5"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb719-6" title="6">    <span class="dt">name=</span><span class="st">&quot;Coverage&quot;</span></a>
+<a class="sourceLine" id="cb719-7" title="7">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-8" title="8"><span class="st">  </span><span class="kw">scale_x_continuous</span>(</a>
+<a class="sourceLine" id="cb719-9" title="9">    <span class="dt">name=</span><span class="st">&quot;Generations&quot;</span>,</a>
+<a class="sourceLine" id="cb719-10" title="10">    <span class="dt">limits=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb719-11" title="11">    <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10000</span>, <span class="dv">20000</span>, <span class="dv">30000</span>, <span class="dv">40000</span>, <span class="dv">50000</span>),</a>
+<a class="sourceLine" id="cb719-12" title="12">    <span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;0e+4&quot;</span>, <span class="st">&quot;1e+4&quot;</span>, <span class="st">&quot;2e+4&quot;</span>, <span class="st">&quot;3e+4&quot;</span>, <span class="st">&quot;4e+4&quot;</span>, <span class="st">&quot;5e+4&quot;</span>)</a>
+<a class="sourceLine" id="cb719-13" title="13"></a>
+<a class="sourceLine" id="cb719-14" title="14">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-15" title="15"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb719-16" title="16"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-17" title="17"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb719-18" title="18"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Activation gene coverage over time&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb719-19" title="19"><span class="st">  </span>p_theme</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-mpe-act-lex-ot-1.png" width="672" /></p>
+</div>
+<div id="end-of-50000-generations-26" class="section level4 hasAnchor">
+<h4><span class="header-section-number">13.4.2.2</span> End of 50,000 generations<a href="mi5000-multi-path-exploration-results.html#end-of-50000-generations-26" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Activation gene coverage in the population at the end of 50,000 generations.</p>
+<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb720-1" title="1"><span class="co">### end of run</span></a>
+<a class="sourceLine" id="cb720-2" title="2"><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb720-3" title="3"><span class="st">  </span><span class="kw">ggplot</span>(., <span class="kw">aes</span>(<span class="dt">x =</span> Structure, <span class="dt">y =</span> pop_act_cov, <span class="dt">color =</span> Structure, <span class="dt">fill =</span> Structure, <span class="dt">shape =</span> Structure)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-4" title="4"><span class="st">  </span><span class="kw">geom_flat_violin</span>(<span class="dt">position =</span> <span class="kw">position_nudge</span>(<span class="dt">x =</span> <span class="fl">.2</span>, <span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">scale =</span> <span class="st">&#39;width&#39;</span>, <span class="dt">alpha =</span> <span class="fl">0.3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-5" title="5"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">position =</span> <span class="kw">position_jitter</span>(<span class="dt">height =</span> <span class="fl">.05</span>, <span class="dt">width =</span> <span class="fl">.05</span>), <span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-6" title="6"><span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">color =</span> <span class="st">&#39;black&#39;</span>, <span class="dt">width =</span> <span class="fl">.2</span>, <span class="dt">outlier.shape =</span> <span class="ot">NA</span>, <span class="dt">alpha =</span> <span class="fl">0.0</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-7" title="7"><span class="st">  </span><span class="kw">scale_shape_manual</span>(<span class="dt">values=</span>SHAPE)<span class="op">+</span></a>
+<a class="sourceLine" id="cb720-8" title="8"><span class="st">  </span><span class="kw">scale_y_continuous</span>(</a>
+<a class="sourceLine" id="cb720-9" title="9">    <span class="dt">name=</span><span class="st">&quot;Coverage&quot;</span></a>
+<a class="sourceLine" id="cb720-10" title="10">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-11" title="11"><span class="st">  </span><span class="kw">scale_x_discrete</span>(</a>
+<a class="sourceLine" id="cb720-12" title="12">    <span class="dt">name=</span><span class="st">&quot;Structure&quot;</span></a>
+<a class="sourceLine" id="cb720-13" title="13">  ) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-14" title="14"><span class="st">  </span><span class="kw">scale_colour_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-15" title="15"><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values =</span> cb_palette) <span class="op">+</span></a>
+<a class="sourceLine" id="cb720-16" title="16"><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&#39;Final activation gene coverage&#39;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb720-17" title="17"><span class="st">  </span>p_theme <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="demo_files/figure-html/mi5000-mpe-act-lex-end-1.png" width="672" /></p>
+<div id="stats-83" class="section level5 hasAnchor">
+<h5><span class="header-section-number">13.4.2.2.1</span> Stats<a href="mi5000-multi-path-exploration-results.html#stats-83" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Summary statistics for activation gene coverage.</p>
+<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb721-1" title="1">coverage =<span class="st"> </span><span class="kw">filter</span>(mi5000_over_time, Diagnostic <span class="op">==</span><span class="st"> &#39;MULTIPATH_EXPLORATION&#39;</span> <span class="op">&amp;</span><span class="st"> `</span><span class="dt">Selection</span><span class="ch">\n</span><span class="dt">Scheme</span><span class="st">`</span> <span class="op">==</span><span class="st"> &#39;LEXICASE&#39;</span> <span class="op">&amp;</span><span class="st"> </span>Generations <span class="op">==</span><span class="st"> </span><span class="dv">50000</span>)</a>
+<a class="sourceLine" id="cb721-2" title="2">coverage<span class="op">$</span>Structure =<span class="st"> </span><span class="kw">factor</span>(coverage<span class="op">$</span>Structure, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&#39;EA&#39;</span>,<span class="st">&#39;NMIS&#39;</span>,<span class="st">&#39;IS&#39;</span>))</a>
+<a class="sourceLine" id="cb721-3" title="3">coverage <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb721-4" title="4"><span class="st">  </span><span class="kw">group_by</span>(Structure) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb721-5" title="5"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb721-6" title="6">    <span class="dt">count =</span> <span class="kw">n</span>(),</a>
+<a class="sourceLine" id="cb721-7" title="7">    <span class="dt">na_cnt =</span> <span class="kw">sum</span>(<span class="kw">is.na</span>(pop_act_cov)),</a>
+<a class="sourceLine" id="cb721-8" title="8">    <span class="dt">min =</span> <span class="kw">min</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb721-9" title="9">    <span class="dt">median =</span> <span class="kw">median</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb721-10" title="10">    <span class="dt">mean =</span> <span class="kw">mean</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb721-11" title="11">    <span class="dt">max =</span> <span class="kw">max</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</a>
+<a class="sourceLine" id="cb721-12" title="12">    <span class="dt">IQR =</span> <span class="kw">IQR</span>(pop_act_cov, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb721-13" title="13">  )</a></code></pre></div>
+<pre><code>## # A tibble: 3 x 8
+##   Structure count na_cnt   min median  mean   max   IQR
+##   &lt;fct&gt;     &lt;int&gt;  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
+## 1 EA          100      0    24     30  31      42  6   
+## 2 NMIS        100      0    23     30  30.4    37  3.25
+## 3 IS          100      0    19     25  24.8    32  4</code></pre>
+<p>Kruskal–Wallis test provides evidence of difference among activation gene coverage.</p>
+<div class="sourceCode" id="cb723"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb723-1" title="1"><span class="kw">kruskal.test</span>(pop_act_cov <span class="op">~</span><span class="st"> </span>Structure, <span class="dt">data =</span> coverage)</a></code></pre></div>
+<pre><code>## 
+##  Kruskal-Wallis rank sum test
+## 
+## data:  pop_act_cov by Structure
+## Kruskal-Wallis chi-squared = 130.57, df = 2, p-value &lt; 2.2e-16</code></pre>
+<p>Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.</p>
+<div class="sourceCode" id="cb725"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb725-1" title="1"><span class="kw">pairwise.wilcox.test</span>(<span class="dt">x =</span> coverage<span class="op">$</span>pop_act_cov, <span class="dt">g =</span> coverage<span class="op">$</span>Structure, <span class="dt">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>,</a>
+<a class="sourceLine" id="cb725-2" title="2">                     <span class="dt">paired =</span> <span class="ot">FALSE</span>, <span class="dt">conf.int =</span> <span class="ot">FALSE</span>, <span class="dt">alternative =</span> <span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+## 
+## data:  coverage$pop_act_cov and coverage$Structure 
+## 
+##      EA     NMIS  
+## NMIS 0.81   -     
+## IS   &lt;2e-16 &lt;2e-16
+## 
+## P value adjustment method: bonferroni</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="mi5000-contradictory-objectives-results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/amlalejini/auto-deploying-bookdown-example/tree/main/Experiments/MI5000/Analysis/multi-path-exploration-cross-results.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["demo.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
