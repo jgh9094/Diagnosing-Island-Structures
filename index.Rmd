@@ -69,7 +69,7 @@ TSIZE = 20
 GENERATIONS = 50000
 
 # data related
-DATA_DIR = './ISLAND-STRUCTURE-DATA-1-20-23/DATA-FINAL/'
+DATA_DIR = '/opt/Diagnosing-Island-Structures/DATA-FINAL/'
 
 # go through each diagnostic and collect over time data for cross comparison (cc)
 base_over_time = data.frame()
