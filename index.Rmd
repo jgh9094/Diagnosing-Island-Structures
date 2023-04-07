@@ -45,9 +45,9 @@ p_theme <- theme(
   panel.border = element_blank(),
   panel.grid.minor = element_blank(),
   legend.title=element_text(size=18),
-  legend.text=element_text(size=14),
-  axis.title = element_text(size=18),
-  axis.text = element_text(size=16),
+  legend.text=element_text(size=18),
+  axis.title = element_text(size=20),
+  axis.text = element_text(size=18),
   legend.position="bottom",
   panel.background = element_rect(fill = "#f1f2f5",
                                   colour = "white",
@@ -57,17 +57,19 @@ p_theme <- theme(
 # default variables
 
 MODEL = c('EA','IS','NMIS')
+STRUCTURE = c('Well-mixed','Standard islands','Isolated islands')
 EXPERIMENTS = c('BASE-EXPERIMENTS/','MI50/','MI5000/')
 SCHEME = c('TRUNCATION','TOURNAMENT','LEXICASE')
 DIAGNOSTIC = c('EXPLOITATION_RATE', 'ORDERED_EXPLOITATION', 'CONTRADICTORY_OBJECTIVES', 'MULTIPATH_EXPLORATION')
 DIMENSIONALITY = 100
 cb_palette <- c('#D81B60','#1E88E5','#FFC107')
+cb_palette_mi <- c('#E66100','#1E88E5','#5D3A9B')
 SHAPE = c(15,16,17)
 TSIZE = 20
 GENERATIONS = 50000
 
 # data related
-DATA_DIR = '/opt/Diagnosing-Island-Structures/DATA-FINAL/'
+DATA_DIR = './ISLAND-STRUCTURE-DATA-1-20-23/DATA-FINAL/'
 
 # go through each diagnostic and collect over time data for cross comparison (cc)
 base_over_time = data.frame()
@@ -94,14 +96,31 @@ for(model in MODEL)
 colnames(base_over_time)[colnames(base_over_time) == "SEL"] = 'Selection\nScheme'
 base_over_time$Structure <- factor(base_over_time$Structure, levels = MODEL)
 base_over_time$sel_pre = base_over_time$sel_pre * -1.0
+base_over_time$`Population structure` <-
+  with(base_over_time, ifelse(Structure == 'EA', 'Well-mixed',
+                        ifelse(Structure == 'IS', 'Standard islands',
+                               ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+base_over_time$`Population structure` <- factor(base_over_time$`Population structure`, levels = STRUCTURE)
+
 
 colnames(mi50_over_time)[colnames(mi50_over_time) == "SEL"] = 'Selection\nScheme'
 mi50_over_time$Structure <- factor(mi50_over_time$Structure, levels = MODEL)
 mi50_over_time$sel_pre = mi50_over_time$sel_pre * -1.0
+mi50_over_time$`Population structure` <-
+  with(mi50_over_time, ifelse(Structure == 'EA', 'Well-mixed',
+                              ifelse(Structure == 'IS', 'Standard islands',
+                                     ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+mi50_over_time$`Population structure` <- factor(mi50_over_time$`Population structure`, levels = STRUCTURE)
+
 
 colnames(mi5000_over_time)[colnames(mi5000_over_time) == "SEL"] = 'Selection\nScheme'
 mi5000_over_time$Structure <- factor(mi5000_over_time$Structure, levels = MODEL)
 mi5000_over_time$sel_pre = mi5000_over_time$sel_pre * -1.0
+mi5000_over_time$`Population structure` <-
+  with(mi5000_over_time, ifelse(Structure == 'EA', 'Well-mixed',
+                              ifelse(Structure == 'IS', 'Standard islands',
+                                     ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+mi5000_over_time$`Population structure` <- factor(mi5000_over_time$`Population structure`, levels = STRUCTURE)
 
 
 # go through each diagnostic and collect best over time for cross comparison (cc)
@@ -127,12 +146,29 @@ for(model in MODEL)
 
 colnames(base_best)[colnames(base_best) == "SEL"] = 'Selection\nScheme'
 base_best$Structure <- factor(base_best$Structure, levels = MODEL)
+base_best$`Population structure` <-
+  with(base_best, ifelse(Structure == 'EA', 'Well-mixed',
+                              ifelse(Structure == 'IS', 'Standard islands',
+                                     ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+base_best$`Population structure` <- factor(base_best$`Population structure`, levels = STRUCTURE)
+
 
 colnames(mi50_best)[colnames(mi50_best) == "SEL"] = 'Selection\nScheme'
 mi50_best$Structure <- factor(mi50_best$Structure, levels = MODEL)
+mi50_best$`Population structure` <-
+  with(mi50_best, ifelse(Structure == 'EA', 'Well-mixed',
+                         ifelse(Structure == 'IS', 'Standard islands',
+                                ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+mi50_best$`Population structure` <- factor(mi50_best$`Population structure`, levels = STRUCTURE)
+
 
 colnames(mi5000_best)[colnames(mi5000_best) == "SEL"] = 'Selection\nScheme'
 mi5000_best$Structure <- factor(mi5000_best$Structure, levels = MODEL)
+mi5000_best$`Population structure` <-
+  with(mi5000_best, ifelse(Structure == 'EA', 'Well-mixed',
+                         ifelse(Structure == 'IS', 'Standard islands',
+                                ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+mi5000_best$`Population structure` <- factor(mi5000_best$`Population structure`, levels = STRUCTURE)
 
 # get generation a satisfactory solution is found for cross comparison (cc)
 base_ssf = data.frame()
@@ -157,10 +193,28 @@ for(model in MODEL)
 
 colnames(base_ssf)[colnames(base_ssf) == "SEL"] = 'Selection\nScheme'
 base_ssf$Structure <- factor(base_ssf$Structure, levels = MODEL)
+base_ssf$`Population structure` <-
+  with(base_ssf, ifelse(Structure == 'EA', 'Well-mixed',
+                  ifelse(Structure == 'IS', 'Standard islands',
+                  ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+base_ssf$`Population structure` <- factor(base_ssf$`Population structure`, levels = STRUCTURE)
+
+
 
 colnames(mi50_ssf)[colnames(mi50_ssf) == "SEL"] = 'Selection\nScheme'
 mi50_ssf$Structure <- factor(mi50_ssf$Structure, levels = MODEL)
+mi50_ssf$`Population structure` <-
+  with(mi50_ssf, ifelse(Structure == 'EA', 'Well-mixed',
+                        ifelse(Structure == 'IS', 'Standard islands',
+                               ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+mi50_ssf$`Population structure` <- factor(mi50_ssf$`Population structure`, levels = STRUCTURE)
+
 
 colnames(mi5000_ssf)[colnames(mi5000_ssf) == "SEL"] = 'Selection\nScheme'
 mi5000_ssf$Structure <- factor(mi5000_ssf$Structure, levels = MODEL)
+mi5000_ssf$`Population structure` <-
+  with(mi5000_ssf, ifelse(Structure == 'EA', 'Well-mixed',
+                        ifelse(Structure == 'IS', 'Standard islands',
+                               ifelse(Structure == 'NMIS', 'Isolated islands',''))))
+mi5000_ssf$`Population structure` <- factor(mi5000_ssf$`Population structure`, levels = STRUCTURE)
 ```
