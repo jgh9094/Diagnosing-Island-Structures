@@ -5,6 +5,10 @@ language:
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",
+  "Experiments/INTERVAL-COMPARISONS/Analysis/exploitation-rate-cross-results.Rmd",
+  "Experiments/INTERVAL-COMPARISONS/Analysis/ordered-exploitation-cross-results.Rmd",
+  "Experiments/INTERVAL-COMPARISONS/Analysis/contradictory-objectives-cross-results.Rmd",
+  "Experiments/INTERVAL-COMPARISONS/Analysis/multi-path-exploration-cross-results.Rmd",
   "Experiments/BASE-EXPERIMENTS/Analysis/exploitation-rate-cross-results.Rmd",
   "Experiments/BASE-EXPERIMENTS/Analysis/ordered-exploitation-cross-results.Rmd",
   "Experiments/BASE-EXPERIMENTS/Analysis/contradictory-objectives-cross-results.Rmd",
