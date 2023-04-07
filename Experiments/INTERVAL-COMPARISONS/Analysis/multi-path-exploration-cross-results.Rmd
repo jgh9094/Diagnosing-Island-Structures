@@ -7,7 +7,7 @@ Activation gene coverage refers to the count of unique activation genes in a giv
 
 ## Analysis dependencies
 
-```{r base-mpe-libs, message=FALSE}
+```{r int-mpe-libs, message=FALSE}
 library(ggplot2)
 library(cowplot)
 library(dplyr)
@@ -48,7 +48,7 @@ Here we analyze how the different population structures affect truncation select
 
 #### Performance over time
 
-```{r base-tru-mpe-perf, message=FALSE}
+```{r int-tru-mpe-perf, message=FALSE}
 lines = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION') %>%
   group_by(Interval, Generations) %>%
   dplyr::summarise(
@@ -81,7 +81,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Best performancefound throughout the 50,000 generations.
 
-```{r base-tru-mpe-per-bst, warning=FALSE}
+```{r int-tru-mpe-per-bst, warning=FALSE}
 filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION' & VAR == 'pop_fit_max') %>%
   ggplot(., aes(x = Interval, y = VAL / DIMENSIONALITY, color = Interval, fill = Interval, shape = Interval)) +
   geom_flat_violin(position = position_nudge(x = .2, y = 0), scale = 'width', alpha = 0.2) +
@@ -104,7 +104,7 @@ filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == '
 
 Summary statistics for the first generation a best performance found.
 
-```{r base-tru-mpe-per-bst-sum}
+```{r int-tru-mpe-per-bst-sum}
 performance = filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION' & VAR == 'pop_fit_max')
 performance %>%
   group_by(Interval) %>%
@@ -121,13 +121,13 @@ performance %>%
 
 Kruskal–Wallis test provides evidence of difference among selection schemes.
 
-```{r base-tru-mpe-per-bst-kru}
+```{r int-tru-mpe-per-bst-kru}
 kruskal.test(VAL ~ Interval, data = performance)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.
 
-```{r base-tru-mpe-per-bst-wil}
+```{r int-tru-mpe-per-bst-wil}
 pairwise.wilcox.test(x = performance$VAL, g = performance$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -136,7 +136,7 @@ pairwise.wilcox.test(x = performance$VAL, g = performance$Interval, p.adjust.met
 
 Best performance is found throughout in final generation.
 
-```{r base-tru-mpe-per-end, warning=FALSE}
+```{r int-tru-mpe-per-end, warning=FALSE}
 filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_fit_max / DIMENSIONALITY, color = Interval, fill = Interval, shape = Interval)) +
   geom_flat_violin(position = position_nudge(x = .2, y = 0), scale = 'width', alpha = 0.2) +
@@ -159,7 +159,7 @@ filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TR
 
 Summary statistics for the best performance is found in final generation.
 
-```{r base-tru-mpe-per-end-sum}
+```{r int-tru-mpe-per-end-sum}
 performance = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000)
 performance %>%
   group_by(Interval) %>%
@@ -176,13 +176,13 @@ performance %>%
 
 Kruskal–Wallis test provides evidence of difference among selection schemes.
 
-```{r base-tru-mpe-per-end-kru}
+```{r int-tru-mpe-per-end-kru}
 kruskal.test(pop_fit_max ~ Interval, data = performance)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.
 
-```{r base-tru-mpe-per-end-wil}
+```{r int-tru-mpe-per-end-wil}
 pairwise.wilcox.test(x = performance$pop_fit_max, g = performance$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -195,7 +195,7 @@ Activation gene coverage analysis.
 
 Activation gene coverage over time.
 
-```{r base-mpe-act-tru-ot, warning=FALSE}
+```{r int-mpe-act-tru-ot, warning=FALSE}
 # data for lines and shading on plots
 lines = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION') %>%
   group_by(Interval, Generations) %>%
@@ -229,7 +229,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Activation gene coverage in the population at the end of 50,000 generations.
 
-```{r base-mpe-act-tru-end}
+```{r int-mpe-act-tru-end}
 ### end of run
 filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_act_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -253,7 +253,7 @@ filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TR
 
 Summary statistics for activation gene coverage.
 
-```{r base-mpe-act-tru-end-sum}
+```{r int-mpe-act-tru-end-sum}
 coverage = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000)
 coverage %>%
   group_by(Interval) %>%
@@ -269,7 +269,7 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of no difference among activation gene coverage.
-```{r base-mpe-act-tru-end-kru}
+```{r int-mpe-act-tru-end-kru}
 kruskal.test(pop_act_cov ~ Interval, data = coverage)
 ```
 
@@ -282,7 +282,7 @@ Here we analyze how the different population structures affect tournament select
 
 #### Performance over time
 
-```{r base-tor-mpe-perf, message=FALSE}
+```{r int-tor-mpe-perf, message=FALSE}
 lines = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT') %>%
   group_by(Interval, Generations) %>%
   dplyr::summarise(
@@ -315,7 +315,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Best performance is found throughout the 50,000 generations.
 
-```{r base-tor-mpe-per-bst, warning=FALSE}
+```{r int-tor-mpe-per-bst, warning=FALSE}
 filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT' & VAR == 'pop_fit_max') %>%
   ggplot(., aes(x = Interval, y = VAL / DIMENSIONALITY, color = Interval, fill = Interval, shape = Interval)) +
   geom_flat_violin(position = position_nudge(x = .2, y = 0), scale = 'width', alpha = 0.2) +
@@ -338,7 +338,7 @@ filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == '
 
 Summary statistics for the best performance found.
 
-```{r base-tor-mpe-per-bst-sum}
+```{r int-tor-mpe-per-bst-sum}
 performance = filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT' & VAR == 'pop_fit_max')
 performance %>%
   group_by(Interval) %>%
@@ -355,13 +355,13 @@ performance %>%
 
 Kruskal–Wallis test provides evidence of difference among selection schemes.
 
-```{r base-tor-mpe-per-bst-kru}
+```{r int-tor-mpe-per-bst-kru}
 kruskal.test(VAL ~ Interval, data = performance)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.
 
-```{r base-tor-mpe-per-bst-wil}
+```{r int-tor-mpe-per-bst-wil}
 pairwise.wilcox.test(x = performance$VAL, g = performance$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -370,7 +370,7 @@ pairwise.wilcox.test(x = performance$VAL, g = performance$Interval, p.adjust.met
 
 Best performance is found in final generation.
 
-```{r base-tor-mpe-per-end, warning=FALSE}
+```{r int-tor-mpe-per-end, warning=FALSE}
 filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_fit_max / DIMENSIONALITY, color = Interval, fill = Interval, shape = Interval)) +
   geom_flat_violin(position = position_nudge(x = .2, y = 0), scale = 'width', alpha = 0.2) +
@@ -393,7 +393,7 @@ filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TO
 
 Summary statistics for best performance is found in final generation.
 
-```{r base-tor-mpe-per-end-sum}
+```{r int-tor-mpe-per-end-sum}
 performance = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000)
 performance %>%
   group_by(Interval) %>%
@@ -410,13 +410,13 @@ performance %>%
 
 Kruskal–Wallis test provides evidence of difference among selection schemes.
 
-```{r base-tor-mpe-per-end-kru}
+```{r int-tor-mpe-per-end-kru}
 kruskal.test(pop_fit_max ~ Interval, data = performance)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.
 
-```{r base-tor-mpe-per-end-wil}
+```{r int-tor-mpe-per-end-wil}
 pairwise.wilcox.test(x = performance$pop_fit_max, g = performance$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -430,7 +430,7 @@ Activation gene coverage analysis.
 
 Activation gene coverage over time.
 
-```{r base-mpe-act-tor-ot, warning=FALSE}
+```{r int-mpe-act-tor-ot, warning=FALSE}
 # data for lines and shading on plots
 lines = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT') %>%
   group_by(Interval, Generations) %>%
@@ -464,7 +464,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Activation gene coverage in the population at the end of 50,000 generations.
 
-```{r base-mpe-act-tor-end}
+```{r int-mpe-act-tor-end}
 ### end of run
 filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_act_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -488,7 +488,7 @@ filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TO
 
 Summary statistics for activation gene coverage.
 
-```{r base-mpe-act-tor-end-sum}
+```{r int-mpe-act-tor-end-sum}
 coverage = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000)
 coverage %>%
   group_by(Interval) %>%
@@ -504,7 +504,7 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of no difference among activation gene coverage.
-```{r base-mpe-act-tor-end-kru}
+```{r int-mpe-act-tor-end-kru}
 kruskal.test(pop_act_cov ~ Interval, data = coverage)
 ```
 
@@ -516,7 +516,7 @@ Here we analyze how the different population structures affect standard lexicase
 
 #### Performance over time
 
-```{r base-lex-mpe-perf, message=FALSE}
+```{r int-lex-mpe-perf, message=FALSE}
 lines = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE') %>%
   group_by(Interval, Generations) %>%
   dplyr::summarise(
@@ -549,7 +549,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Best performance is found throughout in final generation.
 
-```{r base-lex-mpe-per-bst, warning=FALSE}
+```{r int-lex-mpe-per-bst, warning=FALSE}
 filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE' & VAR == 'pop_fit_max') %>%
   ggplot(., aes(x = Interval, y = VAL / DIMENSIONALITY, color = Interval, fill = Interval, shape = Interval)) +
   geom_flat_violin(position = position_nudge(x = .2, y = 0), scale = 'width', alpha = 0.2) +
@@ -572,7 +572,7 @@ filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == '
 
 Summary statistics for the best performance found.
 
-```{r base-lex-mpe-per-bst-sum}
+```{r int-lex-mpe-per-bst-sum}
 performance = filter(df_best, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE' & VAR == 'pop_fit_max')
 performance$Interval = factor(performance$Interval, levels = c('50','5000','500'))
 performance %>%
@@ -590,13 +590,13 @@ performance %>%
 
 Kruskal–Wallis test provides evidence of difference among selection schemes.
 
-```{r base-lex-mpe-per-bst-kru}
+```{r int-lex-mpe-per-bst-kru}
 kruskal.test(VAL ~ Interval, data = performance)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.
 
-```{r base-lex-mpe-per-bst-wil}
+```{r int-lex-mpe-per-bst-wil}
 pairwise.wilcox.test(x = performance$VAL, g = performance$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'l')
 ```
@@ -605,7 +605,7 @@ pairwise.wilcox.test(x = performance$VAL, g = performance$Interval, p.adjust.met
 
 Best performance is found throughout in final generation.
 
-```{r base-lex-mpe-per-end, warning=FALSE}
+```{r int-lex-mpe-per-end, warning=FALSE}
 filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_fit_max / DIMENSIONALITY, color = Interval, fill = Interval, shape = Interval)) +
   geom_flat_violin(position = position_nudge(x = .2, y = 0), scale = 'width', alpha = 0.2) +
@@ -628,7 +628,7 @@ filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LE
 
 Summary statistics for the best performance is found throughout in final generation..
 
-```{r base-lex-mpe-per-end-sum}
+```{r int-lex-mpe-per-end-sum}
 performance = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000)
 performance$Interval = factor(performance$Interval, levels = c('50','5000','500'))
 performance %>%
@@ -646,13 +646,13 @@ performance %>%
 
 Kruskal–Wallis test provides evidence of difference among selection schemes.
 
-```{r base-lex-mpe-per-end-kru}
+```{r int-lex-mpe-per-end-kru}
 kruskal.test(pop_fit_max ~ Interval, data = performance)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction.
 
-```{r base-lex-mpe-per-end-wil}
+```{r int-lex-mpe-per-end-wil}
 pairwise.wilcox.test(x = performance$pop_fit_max, g = performance$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'l')
 ```
@@ -665,7 +665,7 @@ Activation gene coverage analysis.
 
 Activation gene coverage over time.
 
-```{r base-mpe-act-lex-ot, warning=FALSE}
+```{r int-mpe-act-lex-ot, warning=FALSE}
 # data for lines and shading on plots
 lines = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE') %>%
   group_by(Interval, Generations) %>%
@@ -699,7 +699,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Activation gene coverage in the population at the end of 50,000 generations.
 
-```{r base-mpe-act-lex-end}
+```{r int-mpe-act-lex-end}
 ### end of run
 filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_act_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -723,7 +723,7 @@ filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LE
 
 Summary statistics for activation gene coverage.
 
-```{r base-mpe-act-lex-end-sum}
+```{r int-mpe-act-lex-end-sum}
 coverage = filter(df_ot, Diagnostic == 'MULTIPATH_EXPLORATION' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000)
 coverage$Interval = factor(coverage$Interval, levels = c('50','500','5000'))
 coverage %>%
@@ -740,13 +740,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among activation gene coverage.
-```{r base-mpe-act-lex-end-kru}
+```{r int-mpe-act-lex-end-kru}
 kruskal.test(pop_act_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.
 
-```{r base-mpe-act-lex-end-wil}
+```{r int-mpe-act-lex-end-wil}
 pairwise.wilcox.test(x = coverage$pop_act_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```

@@ -55,7 +55,7 @@ Satisfactory trait coverage analysis.
 
 Satisfactory trait coverage over time.
 
-```{r con-sat-tru-ot, warning=FALSE}
+```{r int-con-sat-tru-ot, warning=FALSE}
 lines = filter(df_ot,`Selection\nScheme` == 'TRUNCATION') %>%
   group_by(Interval, Generations) %>%
   dplyr::summarise(
@@ -88,7 +88,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Best satisfactory trait coverage throughout 50,000 generations.
 
-```{r con-sat-tru-bst}
+```{r int-con-sat-tru-bst}
 ### best satisfactory trait coverage throughout
 filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION' & VAR == 'pop_sat_cov') %>%
   ggplot(., aes(x = Interval, y = VAL, color = Interval, fill = Interval, shape = Interval)) +
@@ -112,7 +112,7 @@ filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` =
 
 Summary statistics for the best satisfactory trait coverage.
 
-```{r con-sat-tru-bst-sum}
+```{r int-con-sat-tru-bst-sum}
 ### best
 coverage = filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION' & VAR == 'pop_sat_cov')
 coverage %>%
@@ -130,13 +130,13 @@ coverage %>%
 
 Kruskal–Wallis test provides evidence of difference among satisfactory trait coverage.
 
-```{r con-sat-tru-bst-kru}
+```{r int-con-sat-tru-bst-kru}
 kruskal.test(VAL ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on satisfactory trait coverage.
 
-```{r con-sat-tru-bst-wil}
+```{r int-con-sat-tru-bst-wil}
 pairwise.wilcox.test(x = coverage$VAL, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -145,7 +145,7 @@ pairwise.wilcox.test(x = coverage$VAL, g = coverage$Interval, p.adjust.method = 
 
 Satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-tru-end}
+```{r int-con-sat-tru-end}
 ### end of run
 filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_sat_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -169,7 +169,7 @@ filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 
 
 Summary statistics for satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-tru-end-sum}
+```{r int-con-sat-tru-end-sum}
 ### end of run
 coverage = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000)
 coverage %>%
@@ -186,13 +186,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among satisfactory trait coverage in the population at the end of 50,000 generations.
-```{r con-sat-tru-end-kru}
+```{r int-con-sat-tru-end-kru}
 kruskal.test(pop_sat_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-tru-end-wil}
+```{r int-con-sat-tru-end-wil}
 pairwise.wilcox.test(x = coverage$pop_sat_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -206,7 +206,7 @@ Activation gene coverage analysis.
 
 Activation gene coverage over time.
 
-```{r con-act-tru-ot, warning=FALSE}
+```{r int-con-act-tru-ot, warning=FALSE}
 # data for lines and shading on plots
 lines = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION') %>%
   group_by(Interval, Generations) %>%
@@ -240,7 +240,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Activation gene coverage in the population at the end of 50,000 generations.
 
-```{r con-act-tru-end}
+```{r int-con-act-tru-end}
 ### end of run
 filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_act_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -264,7 +264,7 @@ filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 
 
 Summary statistics for activation gene coverage.
 
-```{r con-act-tru-end-sum}
+```{r int-con-act-tru-end-sum}
 coverage = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TRUNCATION' & Generations == 50000)
 coverage %>%
   group_by(Interval) %>%
@@ -280,13 +280,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among activation gene coverage.
-```{r con-act-tru-end-kru}
+```{r int-con-act-tru-end-kru}
 kruskal.test(pop_act_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.
 
-```{r con-act-tru-end-wil}
+```{r int-con-act-tru-end-wil}
 pairwise.wilcox.test(x = coverage$pop_act_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -304,7 +304,7 @@ Satisfactory trait coverage analysis.
 
 Satisfactory trait coverage over time.
 
-```{r con-sat-tor-ot, warning=FALSE}
+```{r int-con-sat-tor-ot, warning=FALSE}
 lines = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT') %>%
   group_by(Interval, Generations) %>%
   dplyr::summarise(
@@ -337,7 +337,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Best satisfactory trait coverage throughout 50,000 generations.
 
-```{r con-sat-tor-bst}
+```{r int-con-sat-tor-bst}
 ### best satisfactory trait coverage throughout
 filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT' & VAR == 'pop_sat_cov') %>%
   ggplot(., aes(x = Interval, y = VAL, color = Interval, fill = Interval, shape = Interval)) +
@@ -361,7 +361,7 @@ filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` =
 
 Summary statistics for the best satisfactory trait coverage.
 
-```{r con-sat-tor-bst-sum}
+```{r int-con-sat-tor-bst-sum}
 ### best
 coverage = filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT' & VAR == 'pop_sat_cov')
 coverage %>%
@@ -379,13 +379,13 @@ coverage %>%
 
 Kruskal–Wallis test provides evidence of difference among satisfactory trait coverage.
 
-```{r con-sat-tor-bst-kru}
+```{r int-con-sat-tor-bst-kru}
 kruskal.test(VAL ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on satisfactory trait coverage.
 
-```{r con-sat-tor-bst-wil}
+```{r int-con-sat-tor-bst-wil}
 pairwise.wilcox.test(x = coverage$VAL, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -394,7 +394,7 @@ pairwise.wilcox.test(x = coverage$VAL, g = coverage$Interval, p.adjust.method = 
 
 Satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-tor-end}
+```{r int-con-sat-tor-end}
 ### end of run
 filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_sat_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -418,7 +418,7 @@ filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 
 
 Summary statistics for satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-tor-end-sum}
+```{r int-con-sat-tor-end-sum}
 ### end of run
 coverage = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000)
 coverage %>%
@@ -435,13 +435,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among satisfactory trait coverage in the population at the end of 50,000 generations.
-```{r con-sat-tor-end-kru}
+```{r int-con-sat-tor-end-kru}
 kruskal.test(pop_sat_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-tor-end-wil}
+```{r int-con-sat-tor-end-wil}
 pairwise.wilcox.test(x = coverage$pop_sat_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -455,7 +455,7 @@ Activation gene coverage analysis.
 
 Activation gene coverage over time.
 
-```{r con-act-tor-ot, warning=FALSE}
+```{r int-con-act-tor-ot, warning=FALSE}
 # data for lines and shading on plots
 lines = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT') %>%
   group_by(Interval, Generations) %>%
@@ -489,7 +489,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Activation gene coverage in the population at the end of 50,000 generations.
 
-```{r con-act-tor-end}
+```{r int-con-act-tor-end}
 ### end of run
 filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_act_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -513,7 +513,7 @@ filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 
 
 Summary statistics for activation gene coverage.
 
-```{r con-act-tor-end-sum}
+```{r int-con-act-tor-end-sum}
 coverage = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'TOURNAMENT' & Generations == 50000)
 coverage %>%
   group_by(Interval) %>%
@@ -529,13 +529,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among activation gene coverage.
-```{r con-act-tor-end-kru}
+```{r int-con-act-tor-end-kru}
 kruskal.test(pop_act_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.
 
-```{r con-act-tor-end-wil}
+```{r int-con-act-tor-end-wil}
 pairwise.wilcox.test(x = coverage$pop_act_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -553,7 +553,7 @@ Satisfactory trait coverage analysis.
 
 Satisfactory trait coverage over time.
 
-```{r con-sat-lex-ot, warning=FALSE}
+```{r int-con-sat-lex-ot, warning=FALSE}
 lines = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE') %>%
   group_by(Interval, Generations) %>%
   dplyr::summarise(
@@ -586,7 +586,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Best satisfactory trait coverage throughout 50,000 generations.
 
-```{r con-sat-lex-bst}
+```{r int-con-sat-lex-bst}
 ### best satisfactory trait coverage throughout
 filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE' & VAR == 'pop_sat_cov') %>%
   ggplot(., aes(x = Interval, y = VAL, color = Interval, fill = Interval, shape = Interval)) +
@@ -610,7 +610,7 @@ filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` =
 
 Summary statistics for the best satisfactory trait coverage.
 
-```{r con-sat-lex-bst-sum}
+```{r int-con-sat-lex-bst-sum}
 ### best
 coverage = filter(df_best, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE' & VAR == 'pop_sat_cov')
 coverage$Interval = factor(coverage$Interval, levels=c('50','500','5000'))
@@ -629,13 +629,13 @@ coverage %>%
 
 Kruskal–Wallis test provides evidence of difference among satisfactory trait coverage.
 
-```{r con-sat-lex-bst-kru}
+```{r int-con-sat-lex-bst-kru}
 kruskal.test(VAL ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on satisfactory trait coverage.
 
-```{r con-sat-lex-bst-wil}
+```{r int-con-sat-lex-bst-wil}
 pairwise.wilcox.test(x = coverage$VAL, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -644,7 +644,7 @@ pairwise.wilcox.test(x = coverage$VAL, g = coverage$Interval, p.adjust.method = 
 
 Satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-lex-end}
+```{r int-con-sat-lex-end}
 ### end of run
 filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_sat_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -668,7 +668,7 @@ filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 
 
 Summary statistics for satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-lex-end-sum}
+```{r int-con-sat-lex-end-sum}
 ### end of run
 coverage = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000)
 coverage$Interval = factor(coverage$Interval, levels=c('500','50','5000'))
@@ -686,13 +686,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among satisfactory trait coverage in the population at the end of 50,000 generations.
-```{r con-sat-lex-end-kru}
+```{r int-con-sat-lex-end-kru}
 kruskal.test(pop_sat_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on satisfactory trait coverage in the population at the end of 50,000 generations.
 
-```{r con-sat-lex-end-wil}
+```{r int-con-sat-lex-end-wil}
 pairwise.wilcox.test(x = coverage$pop_sat_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
@@ -706,7 +706,7 @@ Activation gene coverage analysis.
 
 Activation gene coverage over time.
 
-```{r con-act-lex-ot, warning=FALSE}
+```{r int-con-act-lex-ot, warning=FALSE}
 # data for lines and shading on plots
 lines = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE') %>%
   group_by(Interval, Generations) %>%
@@ -740,7 +740,7 @@ ggplot(lines, aes(x=Generations, y=mean, group = Interval, fill = Interval, colo
 
 Activation gene coverage in the population at the end of 50,000 generations.
 
-```{r con-act-lex-end}
+```{r int-con-act-lex-end}
 ### end of run
 filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000) %>%
   ggplot(., aes(x = Interval, y = pop_act_cov, color = Interval, fill = Interval, shape = Interval)) +
@@ -764,7 +764,7 @@ filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 
 
 Summary statistics for activation gene coverage.
 
-```{r con-act-lex-end-sum}
+```{r int-con-act-lex-end-sum}
 coverage = filter(df_ot, Diagnostic == 'CONTRADICTORY_OBJECTIVES' & `Selection\nScheme` == 'LEXICASE' & Generations == 50000)
 coverage$Interval = factor(coverage$Interval, levels=c('500','50','5000'))
 coverage %>%
@@ -781,13 +781,13 @@ coverage %>%
 ```
 
 Kruskal–Wallis test provides evidence of difference among activation gene coverage.
-```{r con-act-lex-end-kru}
+```{r int-con-act-lex-end-kru}
 kruskal.test(pop_act_cov ~ Interval, data = coverage)
 ```
 
 Results for post-hoc Wilcoxon rank-sum test with a Bonferroni correction on activation gene coverage.
 
-```{r con-act-lex-end-wil}
+```{r int-con-act-lex-end-wil}
 pairwise.wilcox.test(x = coverage$pop_act_cov, g = coverage$Interval, p.adjust.method = "bonferroni",
                      paired = FALSE, conf.int = FALSE, alternative = 'g')
 ```
