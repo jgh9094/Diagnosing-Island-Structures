@@ -16,7 +16,7 @@ library(PupillometryR)
 
 ## Data
 
-```{r int-con-data, message=FALSE}
+```{r int-mpe-data, message=FALSE}
 base   = filter(base_over_time,   Diagnostic == 'MULTIPATH_EXPLORATION' & Structure == 'IS')
 mi50   = filter(mi50_over_time,   Diagnostic == 'MULTIPATH_EXPLORATION' & Structure == 'IS')
 mi5000 = filter(mi5000_over_time, Diagnostic == 'MULTIPATH_EXPLORATION' & Structure == 'IS')
